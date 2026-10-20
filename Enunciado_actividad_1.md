@@ -22,6 +22,8 @@ El objetivo no es sólo generar una web con IA, sino comprender el tema, explica
 
 Cada grupo dispone de todos los apuntes de la unidad y decide el alcance concreto de su bloque: elegirá las secciones prioritarias en la Fase 1 y las justificará en `PROCESO.md`.
 
+## 2.1. Asignacion de bloque 
+    A nuestro gurupo le ha tocado el bloque 3, que trata sobre VS Code y Emmet.
 ## 3. Entregables
 
 Cada grupo creará un repositorio público en GitHub que contendrá todos los archivos del proyecto.
