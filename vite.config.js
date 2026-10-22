@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'build' ? '/pps-grupo2-Vs-Emmet/' : '/',
+  base: command === 'build' ? '/pps-grupo-trabajo/' : '/',
 }))
