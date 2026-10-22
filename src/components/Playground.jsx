@@ -8,7 +8,7 @@ export default function Playground() {
   let error = ''
   try {
     html = abreviatura.trim() ? expand(abreviatura) : ''
-  } catch (e) {
+  } catch {
     error = 'Abreviatura no válida. Revisa los operadores.'
   }
 
@@ -18,6 +18,7 @@ export default function Playground() {
       <label htmlFor="emmet-input">Abreviatura de Emmet</label>
       <input
         id="emmet-input"
+        name="abreviatura-emmet"
         type="text"
         value={abreviatura}
         onChange={(e) => setAbreviatura(e.target.value)}
