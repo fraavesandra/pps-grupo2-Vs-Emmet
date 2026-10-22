@@ -55,3 +55,4 @@ La skill `web-design-guidelines` aporta un marco sistemático de calidad para as
 
 * **Archivo de conversación:** [`conversaciones-ia/01-planificacion-skill-publica.md`](file:///home/alumno/ra1/pps-grupo-trabajo/conversaciones-ia/01-planificacion-skill-publica.md)
 * **Participantes:** Raquel G., Sandra F.
+
