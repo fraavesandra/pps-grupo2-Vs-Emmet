@@ -104,10 +104,10 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 **Prompt:** "¿lo estas documentando?", "quiero que la pagina funcione y este todo en produccion", "dice que error 404"
 
 **Resultado:** Se identificaron y corrigieron los siguientes aspectos críticos para el despliegue:
-1. En `vite.config.js`, la propiedad `base` apuntaba a un repositorio erróneo (`/pps-grupo2-Vs-Emmet/`), provocando que los archivos de estilos (CSS) y scripts (JS) intentasen cargarse desde una ruta inexistente generando error 404. Se corrigió a `'/pps-grupo-trabajo/'`.
+1. En `vite.config.js`, la propiedad `base` se configuró apuntando al nombre oficial del repositorio renombrado (`/pps-grupo2-Vs-Emmet/`), asegurando que todos los assets estáticos (CSS y JS) se resuelvan en la URL pública correspondiente (`https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/`).
 2. El archivo de entrada estaba nombrado como `Index.html` (con mayúscula). Dado que los entornos de compilación de GitHub Actions (Ubuntu) son sensibles a mayúsculas y minúsculas, se renombró a `index.html` (minúscula) para asegurar la compatibilidad con el servidor web y Vite.
 3. Se comprobó el workflow `.github/workflows/deploy.yml` y se guio la activación de la fuente en los ajustes del repositorio (Settings → Pages → Source: GitHub Actions).
-4. Se actualizó el archivo `README.md` identificando al equipo, los integrantes y el enlace directo a la web publicada.
+4. Se actualizó el archivo `README.md` identificando al equipo, los integrantes y el enlace directo a la web publicada (`https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/`).
 
 **Decisión:** Se aceptaron todas las correcciones de nombres de ruta y archivos, y se optó por el despliegue moderno automatizado mediante GitHub Actions en lugar del despliegue clásico desde rama, garantizando que el comando `npm run build` genere el directorio optimizado `dist/` en cada cambio a `main`.
 

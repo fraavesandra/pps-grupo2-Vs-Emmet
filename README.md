@@ -2,7 +2,7 @@
 
 Sitio web didáctico desarrollado para la asignatura de **Puesta en Producción Segura (PPS)** con el apoyo de herramientas de Inteligencia Artificial.
 
-🌐 **Web didáctica publicada:** [https://fraavesandra.github.io/pps-grupo-trabajo/](https://fraavesandra.github.io/pps-grupo-trabajo/)
+🌐 **Web didáctica publicada:** [https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/](https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/)
 
 ---
 
