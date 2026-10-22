@@ -165,6 +165,25 @@ del DOM no demuestran por sí solas que un anuncio sea audible.
 
 ## 8. Conversación original
 
+### Integración con la aportación del equipo
+
+Al integrar el commit `ff99357`, se incorporó su revisión de navegación,
+legibilidad de bloques de código, scroll interno en tablas y semántica HTML.
+Ese documento atribuye su revisión a Raquel G. y Sandra F. y remite a la
+conversación de selección enlazada abajo. Esa atribución corresponde al
+documento del equipo, no a la ejecución de las pruebas de esta sesión.
+
+Se conservan aquí los resultados verificables y se precisan dos detalles:
+el fondo real de código en modo claro es `#0f1724` (no `#1e1e1e`) y no se
+ha realizado una medición de contraste. Los elementos semánticos observados
+son header, main, section, nav y footer; el texto `<article>` de los ejemplos
+de Emmet no implica que exista un artículo renderizado en la interfaz.
+El enlace a la conversación se mantiene relativo al repositorio, sustituyendo
+la ruta local del documento recibido. Las capturas y pruebas anteriores
+aportan evidencia a las observaciones de adaptación a pantallas estrechas.
+
+### Archivos de conversación
+
 - Selección: [conversación conservada](../conversaciones-ia/01-planificacion-skill-publica.md).
 - Aplicación: [registro parcial de esta sesión](../conversaciones-ia/02-aplicacion-skill-publica.md).
   Este último declara sus límites y no sustituye una exportación completa

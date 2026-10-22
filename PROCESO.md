@@ -89,3 +89,41 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `.github/copilot-instructions.md`
 - `PROCESO.MD`
 
+
+
+---
+
+## Fase 5: Publicar y revisar — Configuración y despliegue en producción con GitHub Pages y GitHub Actions
+
+**Fecha:** 2026-10-22
+
+**Objetivo:** Poner la página web didáctica en producción mediante GitHub Pages, resolver errores de acceso (HTTP 404), configurar el compilador Vite con la ruta base correcta del repositorio y asegurar que los recursos se carguen sin fallos en cualquier navegador y dispositivo.
+
+**Herramienta:** Antigravity (Gemini / Claude) en VS Code. Se utilizó para auditar la configuración de Vite, diagnosticar la causa del error 404 en GitHub Pages, corregir problemas de nombres de archivo sensibles a mayúsculas/minúsculas en Linux y preparar el workflow de GitHub Actions.
+
+**Prompt:** "¿lo estas documentando?", "quiero que la pagina funcione y este todo en produccion", "dice que error 404"
+
+**Resultado:** Se identificaron y corrigieron los siguientes aspectos críticos para el despliegue:
+1. En `vite.config.js`, la propiedad `base` se configuró apuntando al nombre oficial del repositorio renombrado (`/pps-grupo2-Vs-Emmet/`), asegurando que todos los assets estáticos (CSS y JS) se resuelvan en la URL pública correspondiente (`https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/`).
+2. El archivo de entrada estaba nombrado como `Index.html` (con mayúscula). Dado que los entornos de compilación de GitHub Actions (Ubuntu) son sensibles a mayúsculas y minúsculas, se renombró a `index.html` (minúscula) para asegurar la compatibilidad con el servidor web y Vite.
+3. Se comprobó el workflow `.github/workflows/deploy.yml` y se guio la activación de la fuente en los ajustes del repositorio (Settings → Pages → Source: GitHub Actions).
+4. Se actualizó el archivo `README.md` identificando al equipo, los integrantes y el enlace directo a la web publicada (`https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/`).
+
+**Decisión:** Se aceptaron todas las correcciones de nombres de ruta y archivos, y se optó por el despliegue moderno automatizado mediante GitHub Actions en lugar del despliegue clásico desde rama, garantizando que el comando `npm run build` genere el directorio optimizado `dist/` en cada cambio a `main`.
+
+**Justificación:** La separación entre el código fuente de desarrollo (React + JSX) y el código de producción compilado (HTML/CSS/JS minificado) requiere un pipeline automatizado. La corrección del `base path` es estrictamente obligatoria en GitHub Pages cuando el proyecto no se aloja en la raíz del dominio de usuario.
+
+**Verificación:** Se validó la ejecución correcta de Git en local, se verificó el archivo `vite.config.js`, se comprobó el guardado de la configuración en GitHub Pages mediante captura de pantalla de la interfaz de GitHub y se monitorizó la ejecución exitosa del flujo `Deploy a GitHub Pages` en la pestaña Actions.
+
+**Participación:** Sandra F., Raquel G., Pablo C., Alberto M.
+
+**Conversación de origen:** `conversaciones-ia/despliegue-produccion.md`
+
+**Archivos afectados:**
+- `vite.config.js`
+- `index.html`
+- `README.md`
+- `PROCESO.md`
+- `evidencias/fuentes.md`
+- `evidencias/prueba-skill-propia.md`
+- `.github/workflows/deploy.yml`

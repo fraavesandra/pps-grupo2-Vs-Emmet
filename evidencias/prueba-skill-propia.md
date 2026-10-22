@@ -67,3 +67,4 @@ La skill se activó correctamente y ejecutó el flujo planificado:
 
 * **Archivo de conversación:** `conversaciones-ia/creacion-skill-auto-proceso.md`
 * **Integrantes involucrados en la prueba:** Sandra F., Raquel G.
+

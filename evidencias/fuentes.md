@@ -43,3 +43,4 @@ Este documento recopila las fuentes originales y secundarias utilizadas para la 
 ## 3. Verificación y uso crítico de la IA
 
 Las respuestas y propuestas generadas por modelos de lenguaje (ChatGPT, Claude, Antigravity) no se han considerado fuentes primarias de información. Todo contenido técnico ha sido contrastado contra la documentación oficial de Microsoft y de Emmet antes de ser incorporado a la web.
+
