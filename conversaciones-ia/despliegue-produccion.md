@@ -45,3 +45,4 @@
 
 ### Asistente:
 > Registro formal de la Fase 5 (Publicar y revisar) en `PROCESO.md` siguiendo la plantilla de la rúbrica.
+
