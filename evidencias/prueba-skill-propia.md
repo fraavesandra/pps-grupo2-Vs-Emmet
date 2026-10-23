@@ -130,3 +130,10 @@ fatal: could not read Username for 'https://github.com': Device not configured
 Conclusión: generación y validación de documentación superadas; sincronización remota bloqueada por falta de autenticación de Git. Esta evidencia no declara que el push se haya completado. La sesión de GitHub del navegador no acredita credenciales disponibles para Git en la terminal. El resultado del fallo se conserva en un commit de cierre posterior al commit de prueba.
 
 Para completar el flujo se requiere autenticar Git con una cuenta que tenga acceso de escritura al repositorio y repetir el push. También queda pendiente conservar la exportación original más completa disponible. La prueba es útil para detectar estos prerrequisitos; no demuestra un funcionamiento completo de extremo a extremo.
+
+
+## 8. Actualización de trazabilidad tras la subida manual
+
+La subida manual del usuario se verificó mediante `git fetch origin main`: el commit remoto `81c515e` contiene los cinco documentos en sus rutas correctas y con contenido idéntico al local. Esto resuelve su publicación, pero no convierte el push fallido de la prueba en un push exitoso.
+
+Posteriormente se recuperó el registro original de esta conversación y se exportaron sus 25 intervenciones hasta la petición de exportación: [conversación exportada](../conversaciones-ia/04-conversacion-completa-codex-2026-10-23.md). Se conserva el texto de los mensajes con sustituciones explícitas de datos privados, sin reconstruirlo de memoria; se excluyen los bloques internos y las llamadas/salidas de herramientas. Esta exportación sustituye el extracto parcial para consultar la conversación de prueba. La conversación de creación sigue pendiente de recuperar.
