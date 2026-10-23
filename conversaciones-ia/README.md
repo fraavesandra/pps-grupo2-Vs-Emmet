@@ -9,3 +9,10 @@ El enunciado solicita conversaciones originales completas. Los archivos que se d
 Para completar la evidencia de entrega, conservar desde la interfaz el historial original más completo disponible, incluidas las comprobaciones y el cierre, y revisar los datos personales antes de publicarlo. No sustituir mensajes originales por resúmenes atribuidos a la IA. Esta limitación de trazabilidad permanece abierta aunque las comprobaciones funcionales de la skill se superen.
 
 La conversación de creación `creacion-skill-auto-proceso.md`, citada en documentos anteriores, sigue ausente; debe recuperarse de su origen, no redactarse de nuevo.
+
+
+## Exportación recuperada el 23 de octubre de 2026
+
+Se ha localizado el registro local original del chat y se ha generado [04-conversacion-completa-codex-2026-10-23.md](04-conversacion-completa-codex-2026-10-23.md) automáticamente a partir de sus mensajes. Contiene 25 intervenciones de usuario/asistente hasta la solicitud de exportación, incluidas las confirmaciones de los formularios. Sustituye el extracto parcial como evidencia conversacional de esta prueba. El correo académico y el directorio personal se han sustituido por marcadores; se excluyen metadatos internos y llamadas/salidas de herramientas. El alcance exacto se explica en la cabecera. Las advertencias anteriores describen el estado previo a esta recuperación; no se borra su historial.
+
+Esta exportación corresponde a la prueba independiente, no a la conversación original de creación de la skill, que sigue ausente.
