@@ -127,3 +127,35 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `evidencias/fuentes.md`
 - `evidencias/prueba-skill-propia.md`
 - `.github/workflows/deploy.yml`
+
+
+---
+
+## Fase 4: Verificar — Revisión técnica y prueba independiente de auto-proceso
+
+**Fecha:** 2026-10-23
+
+**Objetivo:** Documentar la revisión real del repositorio y comprobar que la skill auto-proceso produce una entrada trazable en una conversación distinta de la utilizada para crearla.
+
+**Herramienta:** Codex, para inspeccionar el repositorio, ejecutar las comprobaciones técnicas y aplicar las instrucciones de la skill existente sin modificarlas.
+
+**Prompt:** "Haz la Prueba independiente de la skill propia y documéntala, respeta los parámetros de la propia skill". Se confirmaron Fase 4: Verificar, herramienta Codex y participación de Alberto M.
+
+**Resultado:** Se revisaron el enunciado, el código y las evidencias. La instalación con lockfile, la compilación y el linter finalizaron correctamente; la web publicada cargó en navegador. Se detectaron la conversación de creación ausente, registros parciales y la necesidad de una prueba independiente. Para esta prueba se guardó un protocolo previo a la generación de esta entrada, un registro de conversación con límites explícitos y la comparación de resultados en evidencias/prueba-skill-propia.md.
+
+**Decisión:** Conservar el registro histórico de la primera prueba y añadir una segunda prueba independiente. Mantener la skill original, documentar las limitaciones y distinguir las comprobaciones de esta sesión de las pruebas previas de móvil y teclado del equipo.
+
+**Justificación:** El enunciado exige probar la skill fuera de su conversación de creación y comparar el resultado con expectativas previas. Una entrada basada en comandos ejecutados y observaciones concretas permite evaluar su utilidad sin inventar resultados ni participación.
+
+**Verificación:** `git pull origin main` indicó `Already up to date`; se revisaron los últimos diez commits, el diff del último commit y el estado inicialmente limpio. En la revisión de esta conversación, `npm ci --ignore-scripts --no-audit --no-fund`, `npm run build` y `npm run lint` devolvieron código 0. Se observó la carga de GitHub Pages. La validación posterior confirmó nueve campos no vacíos, cinco archivos existentes, texto anterior preservado y ambas copias de la skill intactas; `git diff --check` pasó. Se creó el commit local `fa624b2`. El push falló con código 128 porque Git no dispone de credenciales HTTPS en la terminal; la sincronización remota queda pendiente. Los resultados completos se recogen en la evidencia. No se presenta esta revisión como una nueva auditoría completa de accesibilidad o de interacciones.
+
+**Participación:** Alberto M., confirmado por el usuario en esta conversación.
+
+**Conversación de origen:** `conversaciones-ia/03-prueba-independiente-auto-proceso.md` (mensajes conservados y registro técnico; límites de exportación explicitados en `conversaciones-ia/README.md`).
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `evidencias/protocolo-prueba-independiente.md`
+- `evidencias/prueba-skill-propia.md`
+- `conversaciones-ia/03-prueba-independiente-auto-proceso.md`
+- `conversaciones-ia/README.md`
