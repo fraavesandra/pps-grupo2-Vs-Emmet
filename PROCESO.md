@@ -177,3 +177,29 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - src/data/contenido.js
 - src/App.jsx
 - PROCESO.md
+
+## Fase 3: Investigar y producir — Ampliación de las guías con capturas e instrucciones
+
+**Fecha:** 2026-10-25
+**Objetivo:** Ampliar las explicaciones de Ideas principales con capturas de VS Code e instrucciones que permitan identificar dónde pulsar en cada tarea.
+**Herramienta:** Codex, para integrar las capturas aportadas por Raquel G., redactar pies de foto y ajustar el orden del contenido del tutorial.
+**Prompt:** "Quiero que me ayudes a incorporar en las secciones de ideas principales más contenido, empezando por la instalación [...] añadir una guía para instalarlo con imágenes". Después se solicitaron capturas para Interfaz, Crear archivos, Configuración y Extensiones, y ajustes en su colocación.
+**Resultado:** Se amplió Instalación con instrucciones de descarga, un enlace oficial y capturas de descarga y apertura de carpetas, ya recogidas en el commit d5ad108. Se añadieron el diagrama de la interfaz, Explorer y pestañas a Interfaz; se reutilizaron las capturas de abrir carpeta y Explorer en Crear archivos; se incorporó Preferencias en Configuración y las capturas de búsqueda y deshabilitación en Extensiones. Las imágenes incluyen texto alternativo, pie explicativo y acceso a tamaño completo. Se ajustó el tutorial para mostrar el código antes de las imágenes salvo en el paso de Preferencias, donde la imagen precede al comando.
+**Decisión:** Utilizar las capturas aportadas por Raquel G. y colocarlas en los pasos indicados. Se retiró la aclaración del diagrama tras su sustitución por una imagen corregida y se movió la captura de búsqueda de extensiones del paso 1 al paso 2, según sus indicaciones.
+**Justificación:** Relacionar las explicaciones con elementos visibles del editor facilita seguir la guía. Reutilizar las capturas evita duplicar recursos y permite mantener ejemplos coherentes entre secciones.
+**Verificación:** Se revisaron el diff, las importaciones de imágenes y los archivos existentes. La compilación mediante npm.cmd run build terminó con código 0 e incluyó las ocho imágenes utilizadas. Se comprobaron en el código el orden del ejemplo de carpetas y la excepción de Preferencias. No se realizó una comprobación visual del tutorial en navegador en esta revisión.
+**Participación:** Raquel G., única participante confirmada.
+**Conversación de origen:** N/A.
+**Archivos afectados:**
+- src/data/contenido.js
+- src/components/TutorialDialog.jsx
+- src/styles.css
+- src/assets/instalacion/visual.png
+- src/assets/instalacion/proyecto.png
+- src/assets/instalacion/Diagrama anotado de Visual Studio Code.png
+- src/assets/instalacion/Explorer.png
+- src/assets/instalacion/pestañas.png
+- src/assets/instalacion/preferencias.png
+- src/assets/instalacion/extensiones.png
+- src/assets/instalacion/deshabilitar.png
+- PROCESO.md
