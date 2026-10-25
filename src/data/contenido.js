@@ -361,7 +361,6 @@ export const glosario = [
   { termino: 'Linter', definicion: 'Herramienta que analiza el código y avisa de errores o malas prácticas.' },
 ]
 
-// IMPORTANTE: comprobad que cada enlace funciona antes de publicar.
 export const fuentes = [
   { titulo: 'Apuntes de la unidad: pps1_02 vscode.md', url: null, respalda: 'Interfaz, edición, configuración, extensiones y seguridad.' },
   { titulo: 'Apuntes de la unidad: pps1_04 emmet.md', url: null, respalda: 'Operadores de Emmet y ejercicios.' },
@@ -370,4 +369,11 @@ export const fuentes = [
   { titulo: 'Documentación oficial de Emmet', url: 'https://docs.emmet.io/', respalda: 'Sintaxis de abreviaturas.' },
   { titulo: 'Workspace Trust', url: 'https://code.visualstudio.com/docs/editing/workspaces/workspace-trust', respalda: 'Restricted Mode.' },
   { titulo: 'Librería emmet (npm)', url: 'https://www.npmjs.com/package/emmet', respalda: 'Motor usado en el playground de esta web.' },
+]
+
+export const librerias = [
+  { nombre: 'React', url: 'https://react.dev/', uso: 'Construcción de la interfaz con componentes.', licencia: 'MIT' },
+  { nombre: 'Vite', url: 'https://vite.dev/', uso: 'Servidor de desarrollo y empaquetado de la web.', licencia: 'MIT' },
+  { nombre: 'emmet', url: 'https://www.npmjs.com/package/emmet', uso: 'Expandir abreviaturas en el playground y los ejercicios.', licencia: 'MIT' },
+  { nombre: 'lucide-react', url: 'https://lucide.dev/', uso: 'Iconos de las tarjetas.', licencia: 'ISC' },
 ]

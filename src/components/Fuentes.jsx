@@ -1,4 +1,4 @@
-import { fuentes } from '../data/contenido.js'
+import { fuentes, librerias } from '../data/contenido.js'
 
 export default function Fuentes() {
   return (
@@ -14,6 +14,17 @@ export default function Fuentes() {
             )}
             {' — '}
             <span className="nota">{f.respalda}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h3>Librerías y herramientas utilizadas</h3>
+      <ul>
+        {librerias.map((l) => (
+          <li key={l.nombre}>
+            <a href={l.url} target="_blank" rel="noopener noreferrer">{l.nombre}</a>
+            {' — '}
+            <span className="nota">{l.uso} Licencia: {l.licencia}.</span>
           </li>
         ))}
       </ul>
