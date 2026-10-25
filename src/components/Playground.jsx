@@ -30,10 +30,6 @@ export default function Playground() {
       ) : (
         <pre className="codigo" aria-live="polite"><code>{html}</code></pre>
       )}
-      <p className="nota">
-        Esta demo usa la librería <code>emmet</code>. Comprobad en VS Code que
-        el resultado coincide con el de Tab.
-      </p>
     </div>
   )
 }

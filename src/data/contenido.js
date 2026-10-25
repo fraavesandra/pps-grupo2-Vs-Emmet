@@ -1,38 +1,212 @@
-export const ideasClave = [
+export const guias = [
   {
-    titulo: 'Un editor extensible, no un IDE completo',
-    texto:
-      'VS Code nace como editor de código. Las extensiones le añaden lo que un IDE trae de serie: soporte de lenguajes, depuradores, linters, etc.',
+    id: 'instalacion',
+    titulo: 'Instalación',
+    tono: 210,
+    pasos: [
+      {
+        titulo: '¿Qué es VS Code?',
+        texto:
+          'Es un editor de código de Microsoft. Es multiplataforma y se amplía con extensiones, que le añaden soporte de lenguajes, depuradores y otras herramientas.',
+      },
+      {
+        titulo: 'Descargarlo',
+        texto:
+          'En la web oficial hay versiones para Windows, macOS y Linux. Descarga la de tu sistema e instálala con las opciones por defecto.',
+        codigo: 'https://code.visualstudio.com/Download',
+      },
+      {
+        titulo: 'Stable o Insiders',
+        texto:
+          'Stable es la versión para el uso habitual. Insiders recibe los cambios antes, pero puede tener errores. Se pueden instalar las dos a la vez; para clase, usa Stable.',
+      },
+      {
+        titulo: 'Abrir tu primer proyecto',
+        texto:
+          'Trabaja siempre con la carpeta del proyecto, no con archivos sueltos. Así VS Code conoce todo su contexto.',
+        codigo: 'File → Open Folder',
+      },
+    ],
   },
   {
-    titulo: 'Se trabaja con la carpeta del proyecto',
-    texto:
-      'Abrir la carpeta (File → Open Folder) en vez de archivos sueltos permite que VS Code conozca todo el proyecto: Explorer, búsqueda global y configuración propia en .vscode/.',
+    id: 'interfaz',
+    titulo: 'Interfaz',
+    tono: 265,
+    pasos: [
+      {
+        titulo: 'Las cinco zonas',
+        texto:
+          'La ventana se divide en barra de actividad, barra lateral, editor, panel inferior y barra de estado.',
+      },
+      {
+        titulo: 'Barra de actividad',
+        texto:
+          'Da acceso a Explorer, Search, Source Control, Run and Debug y Extensions. Cada icono cambia el contenido de la barra lateral.',
+      },
+      {
+        titulo: 'Explorer',
+        texto:
+          'Muestra los archivos y carpetas del proyecto. Desde aquí puedes crear, renombrar, mover y eliminar.',
+        codigo: 'proyecto/\n├── src/\n│   └── main.py\n└── README.md',
+      },
+      {
+        titulo: 'Pestañas y editores divididos',
+        texto:
+          'Cada archivo abierto aparece como una pestaña. Puedes dividir el área de edición para ver varios archivos a la vez.',
+      },
+      {
+        titulo: 'La paleta de comandos',
+        texto:
+          'Es el buscador de acciones de VS Code. Si no sabes dónde está una función, escríbela aquí.',
+        codigo: 'Ctrl + Shift + P',
+      },
+    ],
   },
   {
-    titulo: 'La paleta de comandos lo encuentra todo',
-    texto:
-      'Con Ctrl+Shift+P escribes lo que quieres hacer y VS Code lo localiza. Con Ctrl+P saltas a cualquier archivo. No hace falta memorizar menús.',
+    id: 'crear-archivos',
+    titulo: 'Crear archivos',
+    tono: 150,
+    pasos: [
+      {
+        titulo: 'Abre una carpeta',
+        texto:
+          'Antes de crear nada, abre la carpeta del proyecto para que los archivos nuevos queden dentro de ella.',
+        codigo: 'File → Open Folder',
+      },
+      {
+        titulo: 'Crear archivos y carpetas',
+        texto:
+          'En el Explorer, usa los iconos de nuevo archivo y nueva carpeta, o haz clic derecho sobre la carpeta donde quieras crearlos.',
+      },
+      {
+        titulo: 'La extensión decide el lenguaje',
+        texto:
+          'VS Code detecta el lenguaje por la extensión del nombre: index.html es HTML, style.css es CSS, main.py es Python. Se puede cambiar a mano con "Change Language Mode".',
+      },
+      {
+        titulo: 'Guardar',
+        texto:
+          'Guarda el archivo actual con Ctrl+S, o todos los abiertos con Ctrl+K y después S.',
+        codigo: 'Ctrl + S',
+      },
+      {
+        titulo: 'Organiza el proyecto',
+        texto:
+          'Una estructura sencilla ayuda: el código en src, las pruebas en tests, la documentación en docs y las imágenes en img.',
+        codigo:
+          'mi-proyecto/\n├── src/\n├── tests/\n├── docs/\n├── img/\n└── README.md',
+      },
+    ],
   },
   {
-    titulo: 'Editar de forma eficiente',
-    texto:
-      'Múltiples cursores, seleccionar todas las coincidencias, IntelliSense y formatear el documento ahorran mucho tiempo. F2 renombra símbolos entendiendo el lenguaje, algo que un buscar y reemplazar no hace.',
+    id: 'configuracion',
+    titulo: 'Configuración',
+    tono: 30,
+    pasos: [
+      {
+        titulo: 'Abrir los ajustes',
+        texto:
+          'Desde el menú File → Preferences → Settings, o desde la paleta de comandos.',
+        codigo: 'Ctrl + Shift + P  >  Preferences: Open Settings (UI)',
+      },
+      {
+        titulo: 'Usuario o workspace',
+        texto:
+          'Los ajustes de usuario se aplican a todos tus proyectos. Los de workspace solo al proyecto actual y se guardan en .vscode/settings.json.',
+      },
+      {
+        titulo: 'Interfaz gráfica o JSON',
+        texto:
+          'Puedes cambiar ajustes desde la interfaz o editando settings.json directamente. Los atajos de teclado y los perfiles tienen su propia configuración.',
+        codigo:
+          '{\n    "editor.fontSize": 14,\n    "editor.tabSize": 4,\n    "editor.wordWrap": "on"\n}',
+      },
+      {
+        titulo: 'Perfiles',
+        texto:
+          'Un perfil guarda un conjunto de extensiones y ajustes. Es útil para separar, por ejemplo, tu entorno web del de Python.',
+      },
+    ],
   },
   {
-    titulo: 'Configuración y extensiones con criterio',
-    texto:
-      'Los ajustes pueden ser de usuario (todos tus proyectos) o de workspace (solo uno). Las extensiones son software de terceros con muchos permisos: comprueba publicador, documentación y mantenimiento antes de instalarlas.',
+    id: 'extensiones',
+    titulo: 'Extensiones',
+    tono: 330,
+    pasos: [
+      {
+        titulo: '¿Qué son?',
+        texto:
+          'Complementos que añaden funciones a VS Code: lenguajes, IntelliSense, depuración, linters, formateadores...',
+      },
+      {
+        titulo: 'Instalar una',
+        texto:
+          'Abre Extensions, busca la extensión y revisa antes publicador, documentación y compatibilidad. Después pulsa Install.',
+      },
+      {
+        titulo: 'Cuidado: son software de terceros',
+        texto:
+          'Las extensiones se ejecutan con permisos importantes, como leer archivos o lanzar procesos. Instala solo las necesarias, de publicadores fiables y con mantenimiento.',
+      },
+      {
+        titulo: 'Recomendar extensiones en un proyecto',
+        texto:
+          'Un proyecto puede sugerir extensiones con un archivo .vscode/extensions.json.',
+        codigo: '{\n    "recommendations": [\n        "ms-python.python"\n    ]\n}',
+      },
+      {
+        titulo: 'Habilitar, deshabilitar, desinstalar',
+        texto:
+          'Si sospechas que una extensión da problemas o consume recursos, deshabilítala para comprobarlo antes de desinstalarla.',
+      },
+    ],
   },
   {
-    titulo: 'Emmet: abreviatura + Tab = HTML',
-    texto:
-      'Escribes una abreviatura como ul>li*3, pulsas Tab y VS Code genera el HTML completo. Se basa en un puñado de operadores: . # > + * {} [] () $',
-  },
-  {
-    titulo: 'Cómo leer una abreviatura de Emmet',
-    texto:
-      'De izquierda a derecha y por trozos pequeños. Cada operador dice cómo se relaciona un elemento con el siguiente: dentro (>), al lado (+), repetido (*)...',
+    id: 'emmet',
+    titulo: 'Emmet',
+    tono: 45,
+    pasos: [
+      {
+        titulo: 'Abreviatura + Tab',
+        texto:
+          'Emmet viene incluido en VS Code. Escribes una abreviatura, pulsas Tab y se convierte en HTML.',
+        codigo: 'ul>li*3',
+      },
+      {
+        titulo: 'Clases e id',
+        texto: 'El punto añade una clase y la almohadilla un id.',
+        codigo: 'div#principal.contenedor',
+      },
+      {
+        titulo: 'Hijo y hermano',
+        texto:
+          'Con > el siguiente elemento va dentro; con + va al mismo nivel.',
+        codigo: 'nav>ul>li\nheader+main+footer',
+      },
+      {
+        titulo: 'Repetir y numerar',
+        texto:
+          'El asterisco repite un elemento. El símbolo $ genera números automáticamente.',
+        codigo: 'ul>li.item$*5',
+      },
+      {
+        titulo: 'Texto y atributos',
+        texto: 'Las llaves ponen texto y los corchetes añaden atributos.',
+        codigo: 'a[href="#" target="_blank"]{Enlace}',
+      },
+      {
+        titulo: 'Agrupar y leer',
+        texto:
+          'Los paréntesis agrupan una estructura para repetirla. Para entender una abreviatura larga, léela de izquierda a derecha y por trozos.',
+        codigo: 'ul>(li>a)*3',
+      },
+      {
+        titulo: 'Plantilla HTML5',
+        texto:
+          'Escribir solo el signo de exclamación y pulsar Tab genera la estructura básica de una página HTML5.',
+        codigo: '!',
+      },
+    ],
   },
 ]
 
