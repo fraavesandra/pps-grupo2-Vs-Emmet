@@ -680,6 +680,32 @@ body:has(dialog[open]) {
   margin-top: 1rem;
 }
 
+.dialogo-instrucciones {
+  padding-left: 1.25rem;
+}
+
+.dialogo-instrucciones li + li {
+  margin-top: .6rem;
+}
+
+.dialogo-figura {
+  margin: 1rem 0;
+}
+
+.dialogo-figura img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+}
+
+.dialogo-figura figcaption {
+  margin-top: .5rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
 .dialogo-nav button {
   background: var(--c);
   border-color: var(--c);

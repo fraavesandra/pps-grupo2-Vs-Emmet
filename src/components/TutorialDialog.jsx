@@ -21,6 +21,28 @@ function Pasos({ guia, onClose }) {
             <div className="dialogo-paso" aria-live="polite">
                 <h3 id="dialogo-titulo">{paso.titulo}</h3>
                 <p>{paso.texto}</p>
+                {paso.enlace && (
+                    <p>
+                        <a href={paso.enlace.url} target="_blank" rel="noopener noreferrer">
+                            {paso.enlace.texto} (abre en otra pestaña)
+                        </a>
+                    </p>
+                )}
+                {paso.instrucciones && (
+                    <ul className="dialogo-instrucciones">
+                        {paso.instrucciones.map((instruccion) => (
+                            <li key={instruccion}>{instruccion}</li>
+                        ))}
+                    </ul>
+                )}
+                {paso.imagen && (
+                    <figure className="dialogo-figura">
+                        <a href={paso.imagen.src} target="_blank" rel="noopener noreferrer" aria-label="Abrir captura a tamaño completo en otra pestaña">
+                            <img src={paso.imagen.src} alt={paso.imagen.alt} />
+                        </a>
+                        <figcaption>{paso.imagen.pie}</figcaption>
+                    </figure>
+                )}
                 {paso.codigo && (
                     <pre className="codigo">
                         <code>{paso.codigo}</code>

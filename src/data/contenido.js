@@ -1,3 +1,6 @@
+import descargaVscode from '../assets/instalacion/visual.png'
+import abrirProyecto from '../assets/instalacion/proyecto.png'
+
 export const guias = [
   {
     id: 'instalacion',
@@ -12,8 +15,22 @@ export const guias = [
       {
         titulo: 'Descargarlo',
         texto:
-          'En la web oficial hay versiones para Windows, macOS y Linux. Descarga la de tu sistema e instálala con las opciones por defecto.',
-        codigo: 'https://code.visualstudio.com/Download',
+          'Abre la página oficial de descarga. Encontrarás tres tarjetas con las opciones para Windows, macOS y Linux. Elige el botón que corresponde al sistema del ordenador donde vas a instalar VS Code.',
+        enlace: {
+          url: 'https://code.visualstudio.com/Download',
+          texto: 'Abrir la página oficial de descarga',
+        },
+        imagen: {
+          src: descargaVscode,
+          alt: 'Página de descarga de Visual Studio Code con las tarjetas de Windows, macOS y Linux enmarcadas en rojo.',
+          pie: 'Elige la descarga de tu sistema en la zona marcada en rojo. Pulsa la imagen para ampliarla.',
+        },
+        instrucciones: [
+          'En Windows, pulsa el botón azul «Windows» de la tarjeta de la izquierda.',
+          'En macOS, pulsa «Mac Universal» en la tarjeta central.',
+          'En Linux, elige «Debian/Ubuntu» o «Red Hat/Fedora» según tu distribución.',
+          'Espera a que termine la descarga y localiza el archivo en la carpeta Descargas de tu navegador.',
+        ],
       },
       {
         titulo: 'Stable o Insiders',
@@ -23,8 +40,13 @@ export const guias = [
       {
         titulo: 'Abrir tu primer proyecto',
         texto:
-          'Trabaja siempre con la carpeta del proyecto, no con archivos sueltos. Así VS Code conoce todo su contexto.',
+          'En VS Code, pulsa Archivo → Abrir carpeta…, como se señala en la captura. Selecciona la carpeta de tu proyecto y confirma la selección. Trabaja siempre con la carpeta del proyecto, no con archivos sueltos: así VS Code conoce todo su contexto.',
         codigo: 'File → Open Folder',
+        imagen: {
+          src: abrirProyecto,
+          alt: 'Menú Archivo de VS Code con Archivo y la opción Abrir carpeta señalados en rojo.',
+          pie: 'Abre Archivo → Abrir carpeta… para seleccionar tu proyecto. Pulsa la imagen para ampliarla.',
+        },
       },
     ],
   },
