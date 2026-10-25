@@ -246,7 +246,7 @@ export const atajos = [
   { accion: 'Renombrar símbolo', atajo: 'F2' },
   { accion: 'Formatear documento', atajo: 'Shift+Alt+F' },
   { accion: 'Cursor adicional', atajo: 'Alt+clic' },
-  { accion: 'Terminal integrado', atajo: 'Ctrl+ñ (teclado español) · Ctrl+` por defecto' },
+  { accion: 'Terminal integrado', atajo: 'Ctrl+`', nota: ' En teclado español suele ser Ctrl+ñ' },
   { accion: 'Zen Mode', atajo: 'Ctrl+K Z' },
   { accion: 'Cerrar archivo', atajo: 'Ctrl+W' },
 ]
