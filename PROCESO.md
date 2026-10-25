@@ -159,3 +159,21 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `evidencias/prueba-skill-propia.md`
 - `conversaciones-ia/03-prueba-independiente-auto-proceso.md`
 - `conversaciones-ia/README.md`
+
+## Fase 3: Investigar y producir — Creación de la sección del glosario
+
+**Fecha:** 2026-10-25
+**Objetivo:** Incorporar una sección de consulta con definiciones de los términos utilizados en la web didáctica sobre Visual Studio Code y Emmet.
+**Herramienta:** Codex, según lo indicado por Raquel G.
+**Prompt:** No se dispone del prompt original de creación. Solicitud de documentación: "Documenta que he creado la sección del glosario. Usé codex. Participé yo, Raquel G."
+**Resultado:** Se incorporó una sección de glosario con diez términos: IDE, Workspace, Command Palette, IntelliSense, Extensión, settings.json, Restricted Mode, Emmet, Abreviatura y Linter. El componente muestra los términos y sus definiciones mediante una lista de descripción.
+**Decisión:** Incorporar el glosario a la página como sección de consulta, según la creación comunicada por Raquel G.
+**Justificación:** Facilitar la comprensión del vocabulario técnico y permitir consultar las definiciones durante el aprendizaje.
+**Verificación:** Se inspeccionaron src/components/Glosario.jsx y los diez términos definidos en src/data/contenido.js. Se comprobó que src/App.jsx importa y muestra el componente Glosario. Esta comprobación verifica la integración en el código; no incluye una revisión visual ni una validación de las definiciones con fuentes externas.
+**Participación:** Raquel G., única participante confirmada.
+**Conversación de origen:** N/A.
+**Archivos afectados:**
+- src/components/Glosario.jsx
+- src/data/contenido.js
+- src/App.jsx
+- PROCESO.md
