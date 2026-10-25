@@ -1,12 +1,12 @@
 # Conversación con Codex — Guías con capturas y documentación
 
 **Fecha:** 2026-10-25
-**Participante:** Raquel G.
+**Participante:** Usuario
 **Herramienta:** Codex
 
 Exportación de los mensajes de usuario y asistente del registro local original, hasta la solicitud de guardar esta conversación. Se incluyen las actualizaciones de progreso y las respuestas finales; se excluyen instrucciones internas, metadatos, llamadas y salidas de herramientas. Se retira el contexto automático del IDE y se sustituye el directorio personal por [DIRECTORIO_PERSONAL]. Las imágenes adjuntas se representan mediante un marcador, sin copiar sus datos binarios. Las respuestas a formularios se conservan como texto del registro cuando están presentes. Las comprobaciones técnicas se describen en las respuestas; esta exportación no reproduce sus salidas completas.
 
-## 1. Raquel G.
+## 1. Usuario
 
 Eres un asistente para documentar el proceso de un proyecto grupal.
 
@@ -46,7 +46,7 @@ Entendido. Cuando me pidas documentar un cambio en `PROCESO.md`, usaré ese form
 - ¿Usaste IA?
 - ¿Quiénes participasteis?
 
-## 3. Raquel G.
+## 3. Usuario
 
 vale pues ahora quiero que me ayudes a incorporar en las secciones de ideas principales mas contenido, empezando por la instalacion, ahora mismo hay una pequeña explicacion pero querriamos añadir una guia para instalarlo con imagenes. por ejemplo en el paso 2 añadir una imagen de la pagina y de donde darle, te la paso yo cuando me lo digas
 
@@ -62,7 +62,7 @@ Pásame la captura para el **paso 2: Descargarlo**, donde se vea la página ofic
 
 Con ella ampliaré ese paso con instrucciones concretas e integraré la imagen en la guía. Después podemos seguir con las pantallas del instalador.
 
-## 6. Raquel G.
+## 6. Usuario
 
 [Imagen adjunta por el usuario]
 
@@ -78,7 +78,7 @@ La captura se ve en el chat, pero no tengo acceso a ella como archivo para incor
 
 He comprobado el formato de los cambios; queda pendiente verificar la compilación.
 
-## 9. Raquel G.
+## 9. Usuario
 
 vale vreame tu la carpeta para meter las imagenes que necesitemos
 
@@ -92,7 +92,7 @@ Creada la carpeta [src/assets/instalacion](/[DIRECTORIO_PERSONAL]/pps-grupo2-Vs-
 
 Guarda ahí la captura con el nombre `descarga-vscode.png` y avísame para incorporarla al paso 2.
 
-## 12. Raquel G.
+## 12. Usuario
 
 ya ets añadida, ahora dime tambien como ver la pagina en tiempo real
 
@@ -120,7 +120,7 @@ Al guardar cambios, la página se actualizará automáticamente. Mantén la term
 
 **No he podido arrancarla aquí porque `npm` no está disponible.** Si te aparece ese mismo error, instala Node.js en su versión LTS y reinicia VS Code antes de ejecutar los comandos.
 
-## 15. Raquel G.
+## 15. Usuario
 
 PS [DIRECTORIO_PERSONAL]\pps-grupo2-Vs-Emmet> npm install
 npm : El término 'npm' no se reconoce como nombre de un cmdlet, función, archivo de script o 
@@ -156,7 +156,7 @@ Abre el enlace que aparezca en la terminal para ver la página. Se actualizará 
 
 Si ya tenías Node.js instalado, prueba primero a reiniciar VS Code.
 
-## 17. Raquel G.
+## 17. Usuario
 
 pero no hay forma de ver el archivo en visual, de alguna forma sin arrancar el proyecyo?
 
@@ -173,7 +173,7 @@ npm run dev
 
 Después puedes verla **dentro de VS Code**: abre la paleta con `Ctrl+Shift+P`, busca **Simple Browser: Show** y pega la dirección que indique la terminal, normalmente `http://localhost:5173/`.
 
-## 19. Raquel G.
+## 19. Usuario
 
 PS [DIRECTORIO_PERSONAL]\pps-grupo2-Vs-Emmet> node --version
 v24.22.1
@@ -201,7 +201,7 @@ npm.cmd run dev
 
 Después abre la dirección que aparezca en la terminal, normalmente **http://localhost:5173/**. Al guardar cambios, la página se actualizará automáticamente.
 
-## 21. Raquel G.
+## 21. Usuario
 
 vale, ahora en el paso 4 añadir la captura proyecto que tambien esta en instalacion
 
@@ -215,7 +215,7 @@ Añadida `proyecto.png` al **paso 4: Abrir tu primer proyecto**, con instruccion
 
 La compilación funciona correctamente. Si tienes `npm.cmd run dev` activo, verás el cambio automáticamente.
 
-## 24. Raquel G.
+## 24. Usuario
 
 **"Documenta que he creado la sección del glosario. Usé codex. Participé yo, Raquel G."**
 
@@ -229,7 +229,7 @@ He revisado el glosario: contiene diez términos y está integrado en la página
 
 ¿Confirmas **Fase 3: Investigar y producir**, uso de **Codex** y participación únicamente de **Raquel G.**? Con esa confirmación registraré la entrada en `PROCESO.md`.
 
-## 27. Raquel G.
+## 27. Usuario
 
 <send_user_message_question_reply>
 [{"questionItemId":"[\"request_user_input_async\",\"call_d94f3a99506e45f399a7ee40a1dd1421\",0]","question":"¿A qué fase corresponde la creación del glosario? Confirmo también: ¿usaste Codex y participaste únicamente tú, Raquel G.?","answer":"Fase 3: Investigar y producir. Sí, Codex y solo Raquel G."}]
@@ -245,7 +245,7 @@ Documentado en [PROCESO.md](/[DIRECTORIO_PERSONAL]/pps-grupo2-Vs-Emmet/PROCESO.m
 
 Cambios subidos a `main` en el commit `d249670` mediante la skill [auto-proceso](/[DIRECTORIO_PERSONAL]/pps-grupo2-Vs-Emmet/.agents/skills/auto-proceso/SKILL.md). Si conservas la conversación original de creación, recuerda guardarla en `conversaciones-ia/`.
 
-## 30. Raquel G.
+## 30. Usuario
 
 me pones ahora en interfaz en el pasi 1 la imagen de diagrama?
 
@@ -259,7 +259,7 @@ Añadida al **paso 1 de Interfaz**, con opción de ampliarla. La compilación fu
 
 El diagrama tiene dos etiquetas mal ubicadas: la barra de actividad es la columna de iconos izquierda y la barra lateral contiene el Explorador. He añadido una aclaración debajo de la imagen.
 
-## 33. Raquel G.
+## 33. Usuario
 
 quita la explicacion debajo, he cambiado la foto por una coreecta
 
@@ -271,7 +271,7 @@ Voy a quitar la aclaración y dejar únicamente la indicación para ampliar el d
 
 He quitado la aclaración. Ahora solo aparece: «Pulsa el diagrama para ampliarlo».
 
-## 36. Raquel G.
+## 36. Usuario
 
 y en el paso 3 me añades la imagen explorer con el pie de foto de crear archivo, carpeta.. la explicacion de los cuatro iconos que hay
 
@@ -285,7 +285,7 @@ Añadida **Explorer.png** al paso 3 de Interfaz, con un pie que explica los cuat
 
 La imagen se puede ampliar y la compilación funciona correctamente.
 
-## 39. Raquel G.
+## 39. Usuario
 
 pero lo de proyecto, src que hay debajo me lo pones encima de la imagen
 
@@ -297,7 +297,7 @@ Voy a colocar el ejemplo de `proyecto/` y `src/` encima de la imagen de Explorer
 
 Hecho: el ejemplo con `proyecto/`, `src/` y los archivos aparece ahora encima de la imagen de Explorer.
 
-## 42. Raquel G.
+## 42. Usuario
 
 y la imagen pestañas en el paso 4
 
@@ -311,7 +311,7 @@ Añadida `pestañas.png` al **paso 4 de Interfaz**, con un pie que explica las p
 
 Compilación comprobada correctamente.
 
-## 45. Raquel G.
+## 45. Usuario
 
 y ne crear archivos paso 1 pones la imagen de abrir carpeta que se llama prroyecto, aqui tambn
 
@@ -323,7 +323,7 @@ Voy a reutilizar `proyecto.png` en el paso 1 de Crear archivos.
 
 Añadida `proyecto.png` también al **paso 1 de Crear archivos**, con el pie de foto de **Archivo → Abrir carpeta…** y opción de ampliarla.
 
-## 48. Raquel G.
+## 48. Usuario
 
 en el paso 2 la imgen explorer de nuevo
 
@@ -335,7 +335,7 @@ Voy a añadir de nuevo la imagen de Explorer al paso 2 de Crear archivos.
 
 Añadida la imagen de Explorer al **paso 2 de Crear archivos**, con un pie que identifica los cuatro iconos y opción de ampliarla.
 
-## 51. Raquel G.
+## 51. Usuario
 
 en el paso 1 de configuracion me añades la imagen de preferencias encima del comando
 
@@ -349,7 +349,7 @@ Añadida `preferencias.png` al **paso 1 de Configuración**, encima del comando,
 
 Compilación comprobada correctamente.
 
-## 54. Raquel G.
+## 54. Usuario
 
 en extensiones paso 1 la imagen extensiones con la explicacion de que en la barra de busqueda se pueden buscar
 
@@ -363,7 +363,7 @@ Añadida la imagen al **paso 1 de Extensiones**, con un pie que explica cómo us
 
 La compilación funciona correctamente.
 
-## 57. Raquel G.
+## 57. Usuario
 
 perdon, eso iba en el apso 2
 
@@ -375,7 +375,7 @@ Voy a mover la imagen y su explicación al paso 2 de Extensiones.
 
 Hecho: la imagen y la explicación están ahora en el **paso 2: Instalar una** de Extensiones.
 
-## 60. Raquel G.
+## 60. Usuario
 
 he cambiado la imagen, actualizala
 
@@ -387,7 +387,7 @@ Voy a comprobar la nueva imagen de Extensiones y actualizar su referencia para q
 
 Actualizada la referencia a `extensiones.png` en el **paso 2 de Extensiones**. La compilación funciona correctamente.
 
-## 63. Raquel G.
+## 63. Usuario
 
 y la de dewshabilitar en paso 5
 
@@ -399,7 +399,7 @@ Voy a buscar la imagen de deshabilitar y añadirla al paso 5 de Extensiones.
 
 Añadida `deshabilitar.png` al **paso 5 de Extensiones**, con un pie que explica cómo deshabilitar o desinstalar una extensión y opción de ampliar la imagen.
 
-## 66. Raquel G.
+## 66. Usuario
 
 Lee el archivo `skills/auto-proceso/SKILL.md` y sigue sus instrucciones para documentar en `PROCESO.md` los cambios que he hecho en el proyecto.
 
@@ -407,7 +407,7 @@ Lee el archivo `skills/auto-proceso/SKILL.md` y sigue sus instrucciones para doc
 
 Voy a leer la skill `auto-proceso`, revisar los cambios y preparar la entrada de `PROCESO.md` con el formato que acordamos.
 
-## 68. Raquel G.
+## 68. Usuario
 
 <send_user_message_question_reply>
 [{"questionItemId":"[\"request_user_input_async\",\"call_abbdfc53571f49d899f34fe81a6f590f\",0]","question":"Para documentar la ampliación de las guías con capturas, ¿confirmas Fase 3: Investigar y producir, uso de Codex y participación únicamente de Raquel G., o cambian la fase, la IA o los participantes?","answer":"Confirmo: Fase 3, Codex y solo Raquel G."}]
@@ -425,6 +425,6 @@ La skill [auto-proceso](/[DIRECTORIO_PERSONAL]/pps-grupo2-Vs-Emmet/skills/auto-p
 
 El código y las imágenes siguen pendientes de commit. Si guardas esta conversación, añádela también a `conversaciones-ia/`.
 
-## 71. Raquel G.
+## 71. Usuario
 
 me pasas esta conversacion para añadirla   conversaciones-ia/

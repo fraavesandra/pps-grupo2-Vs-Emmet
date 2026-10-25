@@ -1,5 +1,12 @@
 # Conservación de conversaciones
 
+## Conversaciones aportadas sobre contenidos y diseño
+
+- [Propuesta de contenidos y organización del proyecto](conversacion_vscode_emmet.md): archivo aportado por el usuario, conservado como única copia tras retirar la versión anterior duplicada.
+- [Diseño y representación en la página web](conversacion_diseno_web_vscode_emmet.md): propuesta para combinar teoría, capturas e instrucciones paso a paso.
+
+Ambos archivos se conservan sin modificar y se identifican en sus propias cabeceras como transcripciones reconstruidas, no como exportaciones automáticas del historial original.
+
 ## Guías con capturas, 25 de octubre de 2026
 
 [05-conversacion-codex-guias-capturas-2026-10-25.md](05-conversacion-codex-guias-capturas-2026-10-25.md) contiene 81 mensajes de usuario y asistente extraídos del registro local original, hasta la solicitud de exportación. Incluye la ampliación de las guías, las entradas de PROCESO.md, la puesta en marcha local y el diagnóstico de la publicación. La cabecera detalla las exclusiones de metadatos, herramientas, contexto automático del IDE y datos personales. Las imágenes adjuntas se indican con marcadores.
