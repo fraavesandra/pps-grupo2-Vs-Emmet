@@ -1,5 +1,11 @@
 import descargaVscode from '../assets/instalacion/visual.png'
 import abrirProyecto from '../assets/instalacion/proyecto.png'
+import diagramaInterfaz from '../assets/instalacion/Diagrama anotado de Visual Studio Code.png'
+import explorerInterfaz from '../assets/instalacion/Explorer.png'
+import pestanasInterfaz from '../assets/instalacion/pestañas.png'
+import preferenciasConfiguracion from '../assets/instalacion/preferencias.png'
+import extensionesVista from '../assets/instalacion/extensiones.png'
+import deshabilitarExtension from '../assets/instalacion/deshabilitar.png'
 
 export const guias = [
   {
@@ -59,6 +65,11 @@ export const guias = [
         titulo: 'Las cinco zonas',
         texto:
           'La ventana se divide en barra de actividad, barra lateral, editor, panel inferior y barra de estado.',
+        imagen: {
+          src: diagramaInterfaz,
+          alt: 'Diagrama de VS Code con el explorador a la izquierda, el editor en el centro, el panel inferior y la barra de estado abajo.',
+          pie: 'Pulsa el diagrama para ampliarlo.',
+        },
       },
       {
         titulo: 'Barra de actividad',
@@ -70,11 +81,21 @@ export const guias = [
         texto:
           'Muestra los archivos y carpetas del proyecto. Desde aquí puedes crear, renombrar, mover y eliminar.',
         codigo: 'proyecto/\n├── src/\n│   └── main.py\n└── README.md',
+        imagen: {
+          src: explorerInterfaz,
+          alt: 'Explorador de VS Code con su acceso y los cuatro iconos de gestión del árbol de archivos señalados en rojo.',
+          pie: 'De izquierda a derecha: Nuevo archivo, para crear un archivo; Nueva carpeta, para crear una carpeta; Actualizar, para refrescar el árbol de archivos; y Contraer todo, para plegar las carpetas desplegadas. Pulsa la imagen para ampliarla.',
+        },
       },
       {
         titulo: 'Pestañas y editores divididos',
         texto:
           'Cada archivo abierto aparece como una pestaña. Puedes dividir el área de edición para ver varios archivos a la vez.',
+        imagen: {
+          src: pestanasInterfaz,
+          alt: 'VS Code con dos grupos de editores en paralelo y las pestañas de PROCESO.md e index.html y el icono de dividir editor señalados en rojo.',
+          pie: 'Las pestañas permiten cambiar de archivo. El icono Dividir editor, señalado arriba a la derecha, permite abrir otro grupo para trabajar con archivos en paralelo. Pulsa la imagen para ampliarla.',
+        },
       },
       {
         titulo: 'La paleta de comandos',
@@ -94,11 +115,21 @@ export const guias = [
         texto:
           'Antes de crear nada, abre la carpeta del proyecto para que los archivos nuevos queden dentro de ella.',
         codigo: 'File → Open Folder',
+        imagen: {
+          src: abrirProyecto,
+          alt: 'Menú Archivo de VS Code con Archivo y la opción Abrir carpeta señalados en rojo.',
+          pie: 'Pulsa Archivo → Abrir carpeta… y selecciona la carpeta de tu proyecto. Pulsa la imagen para ampliarla.',
+        },
       },
       {
         titulo: 'Crear archivos y carpetas',
         texto:
           'En el Explorer, usa los iconos de nuevo archivo y nueva carpeta, o haz clic derecho sobre la carpeta donde quieras crearlos.',
+        imagen: {
+          src: explorerInterfaz,
+          alt: 'Explorador de VS Code con los iconos de nuevo archivo, nueva carpeta, actualizar y contraer todo señalados en rojo.',
+          pie: 'De izquierda a derecha: Nuevo archivo, Nueva carpeta, Actualizar y Contraer todo. Selecciona primero la carpeta donde quieres crear el archivo o la subcarpeta. Pulsa la imagen para ampliarla.',
+        },
       },
       {
         titulo: 'La extensión decide el lenguaje',
@@ -129,6 +160,12 @@ export const guias = [
         titulo: 'Abrir los ajustes',
         texto:
           'Desde el menú File → Preferences → Settings, o desde la paleta de comandos.',
+        imagenAntesDelCodigo: true,
+        imagen: {
+          src: preferenciasConfiguracion,
+          alt: 'Menú de VS Code con Archivo, Preferencias y Configuración señalados en rojo.',
+          pie: 'Abre Archivo → Preferencias → Configuración. También puedes usar la paleta de comandos como se indica debajo. Pulsa la imagen para ampliarla.',
+        },
         codigo: 'Ctrl + Shift + P  >  Preferences: Open Settings (UI)',
       },
       {
@@ -164,6 +201,11 @@ export const guias = [
         titulo: 'Instalar una',
         texto:
           'Abre Extensions, busca la extensión y revisa antes publicador, documentación y compatibilidad. Después pulsa Install.',
+        imagen: {
+          src: extensionesVista,
+          alt: 'Panel Extensiones de VS Code con el icono de acceso y la barra Buscar extensiones en Marketplace señalados en rojo.',
+          pie: 'Pulsa el icono Extensiones de la barra de actividad. En la barra «Buscar extensiones en Marketplace» puedes escribir el nombre de una extensión o una función que necesites para encontrarla. Pulsa la imagen para ampliarla.',
+        },
       },
       {
         titulo: 'Cuidado: son software de terceros',
@@ -180,6 +222,11 @@ export const guias = [
         titulo: 'Habilitar, deshabilitar, desinstalar',
         texto:
           'Si sospechas que una extensión da problemas o consume recursos, deshabilítala para comprobarlo antes de desinstalarla.',
+        imagen: {
+          src: deshabilitarExtension,
+          alt: 'Ficha de la extensión Auto Close Tag con el botón Deshabilitar señalado en rojo y Desinstalar a su derecha.',
+          pie: 'Pulsa Deshabilitar para dejar de usar la extensión sin eliminarla; puedes volver a habilitarla después. Para eliminarla, pulsa Desinstalar. Pulsa la imagen para ampliarla.',
+        },
       },
     ],
   },

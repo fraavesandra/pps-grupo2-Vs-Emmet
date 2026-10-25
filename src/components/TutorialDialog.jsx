@@ -35,6 +35,11 @@ function Pasos({ guia, onClose }) {
                         ))}
                     </ul>
                 )}
+                {paso.codigo && !paso.imagenAntesDelCodigo && (
+                    <pre className="codigo">
+                        <code>{paso.codigo}</code>
+                    </pre>
+                )}
                 {paso.imagen && (
                     <figure className="dialogo-figura">
                         <a href={paso.imagen.src} target="_blank" rel="noopener noreferrer" aria-label="Abrir captura a tamaño completo en otra pestaña">
@@ -43,7 +48,7 @@ function Pasos({ guia, onClose }) {
                         <figcaption>{paso.imagen.pie}</figcaption>
                     </figure>
                 )}
-                {paso.codigo && (
+                {paso.codigo && paso.imagenAntesDelCodigo && (
                     <pre className="codigo">
                         <code>{paso.codigo}</code>
                     </pre>
