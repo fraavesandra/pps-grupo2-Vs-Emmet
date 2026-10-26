@@ -2,7 +2,50 @@ import { useState } from 'react'
 import expand from 'emmet'
 import { ejercicios } from '../data/contenido.js'
 
-const normalizar = (s) => s.replace(/\s+/g, ' ').replace(/> </g, '><').trim()
+// Compara dos nodos HTML estructuralmente, ignorando el orden de atributos (AUD-02)
+function sonNodosEquivalentes(nodo1, nodo2) {
+  if (nodo1.nodeType !== nodo2.nodeType) return false
+
+  // Nodo de texto
+  if (nodo1.nodeType === 3) {
+    return nodo1.nodeValue.trim() === nodo2.nodeValue.trim()
+  }
+
+  // Nodo de elemento
+  if (nodo1.nodeType === 1) {
+    if (nodo1.tagName.toLowerCase() !== nodo2.tagName.toLowerCase()) return false
+
+    const attrs1 = Array.from(nodo1.attributes)
+    const attrs2 = Array.from(nodo2.attributes)
+
+    if (attrs1.length !== attrs2.length) return false
+
+    for (const attr of attrs1) {
+      if (nodo2.getAttribute(attr.name) !== attr.value) return false
+    }
+
+    const hijos1 = Array.from(nodo1.childNodes).filter(
+      (n) => n.nodeType !== 3 || n.nodeValue.trim() !== ''
+    )
+    const hijos2 = Array.from(nodo2.childNodes).filter(
+      (n) => n.nodeType !== 3 || n.nodeValue.trim() !== ''
+    )
+
+    if (hijos1.length !== hijos2.length) return false
+
+    return hijos1.every((hijo, i) => sonNodosEquivalentes(hijo, hijos2[i]))
+  }
+
+  return true
+}
+
+function sonHtmlEquivalentes(html1, html2) {
+  if (!html1 || !html2) return false
+  const parser = new DOMParser()
+  const doc1 = parser.parseFromString(`<body>${html1}</body>`, 'text/html')
+  const doc2 = parser.parseFromString(`<body>${html2}</body>`, 'text/html')
+  return sonNodosEquivalentes(doc1.body, doc2.body)
+}
 
 function Ejercicio({ ejercicio, numero }) {
   const [respuesta, setRespuesta] = useState('')
@@ -11,9 +54,23 @@ function Ejercicio({ ejercicio, numero }) {
   const objetivo = expand(ejercicio.solucion)
 
   function comprobar() {
+    const trimmed = respuesta.trim()
+    if (!trimmed) {
+      setEstado('mal')
+      return
+    }
+
+    // AUD-01: Límite de seguridad
+    const repeticiones = trimmed.match(/\*(\d+)/g)
+    if (repeticiones?.some((r) => parseInt(r.slice(1), 10) > 50)) {
+      setEstado('error')
+      return
+    }
+
     try {
-      const mio = normalizar(expand(respuesta))
-      setEstado(mio === normalizar(objetivo) ? 'ok' : 'mal')
+      const mioHtml = expand(trimmed)
+      const esIgual = sonHtmlEquivalentes(mioHtml, objetivo)
+      setEstado(esIgual ? 'ok' : 'mal')
     } catch {
       setEstado('error')
     }

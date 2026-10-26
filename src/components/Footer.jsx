@@ -2,9 +2,9 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <p>
-        PPS · Grupo 3 · VS Code y Emmet
+        PPS · Grupo 2 (Bloque 3) · VS Code y Emmet
         <br />
-        Integrantes: Alberto, Sandra, Raquel, Pablo C.
+        Integrantes: Alberto M., Sandra F., Raquel G., Pablo C.
       </p>
     </footer>
   )

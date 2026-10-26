@@ -340,8 +340,9 @@ pre.codigo code {
     transition: none;
   }
 
+  /* AUD-04: Desactivar animación expansiva decorativa en movimiento reducido */
   .guia::before {
-    transition: transform .7s cubic-bezier(.2, .8, .2, 1);
+    transition: none;
   }
 
   .guia:hover,
@@ -351,7 +352,7 @@ pre.codigo code {
 
   .guia:hover::before,
   .guia:focus-visible::before {
-    transform: scale(8);
+    transform: none;
   }
 
   .guia:hover .guia-icono,
@@ -584,7 +585,8 @@ body:has(dialog[open]) {
 }
 
 .dialogo {
-  --c: hsl(var(--h, 210) 75% 46%);
+  /* AUD-03: Usar tono claro accesible (mínimo 4.5:1 sobre fondo oscuro --bg) independiente del modo de sistema */
+  --c: hsl(var(--h, 210) 80% 68%);
   width: min(40rem, calc(100% - 2rem));
   max-height: calc(100dvh - 2rem);
   padding: 0;
@@ -639,8 +641,8 @@ body:has(dialog[open]) {
 .dialogo-progreso {
   margin: 0 2rem .5rem 0;
   font-size: .85rem;
-  font-weight: 600;
-  color: var(--c);
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .puntos {
@@ -709,13 +711,8 @@ body:has(dialog[open]) {
 .dialogo-nav button {
   background: var(--c);
   border-color: var(--c);
-  color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dialogo-nav button {
-    color: #0b1220;
-  }
+  color: #0b1220;
+  font-weight: 600;
 }
 
 .dialogo-nav button.secundario {

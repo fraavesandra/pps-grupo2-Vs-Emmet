@@ -38,7 +38,7 @@ La web está orientada a enseñar a compañeros de ciclo formativo los fundament
 
 ## 💡 Características de la Web Didáctica
 
-* 🎯 **7 Ideas Clave:** Explicadas con palabras propias y enfoque práctico.
+* 🎯 **6 Guías e Ideas Clave:** Explicadas paso a paso con capturas reales y diálogos interactivos.
 * ⌨️ **Tabla de Atajos de Teclado:** 16 atajos fundamentales para acelerar el desarrollo.
 * 🔍 **Descomponedor de Abreviaturas:** Herramienta interactiva para analizar bloques de Emmet trozo a trozo.
 * 🧪 **Playground en Vivo:** Editor interactivo en el navegador que expande abreviaturas a HTML en tiempo real.
