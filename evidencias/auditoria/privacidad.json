@@ -1,0 +1,22 @@
+{
+  "method": "Regex sobre blobs \u00fanicos de todas las referencias Git locales; sin valores coincidentes. Correos incluyen posibles falsos positivos y autores Git no incluidos. Im\u00e1genes requieren revisi\u00f3n visual.",
+  "uniqueObjects": 114,
+  "matches": [
+    {
+      "commit": "998eb955fe31",
+      "path": "evidencias/skill-publica.md",
+      "type": "ruta-personal",
+      "lines": [
+        56
+      ]
+    },
+    {
+      "commit": "ff9935711fad",
+      "path": "evidencias/skill-publica.md",
+      "type": "ruta-personal",
+      "lines": [
+        56
+      ]
+    }
+  ]
+}

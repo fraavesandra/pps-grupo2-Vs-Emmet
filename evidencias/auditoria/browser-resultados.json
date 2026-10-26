@@ -1,0 +1,792 @@
+{
+  "browser": "156.0.8078.47",
+  "errors": [],
+  "resources": [],
+  "guides": [
+    {
+      "id": "instalacion",
+      "steps": [
+        {
+          "title": "¿Qué es VS Code?",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Descargarlo",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "https://code.visualstudio.com/Download",
+            "/src/assets/instalacion/visual.png"
+          ]
+        },
+        {
+          "title": "Stable o Insiders",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Abrir tu primer proyecto",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/proyecto.png"
+          ]
+        }
+      ],
+      "closed": true,
+      "focusReturned": true,
+      "escape": true
+    },
+    {
+      "id": "interfaz",
+      "steps": [
+        {
+          "title": "Las cinco zonas",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/Diagrama%20anotado%20de%20Visual%20Studio%20Code.png"
+          ]
+        },
+        {
+          "title": "Barra de actividad",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Explorer",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/Explorer.png"
+          ]
+        },
+        {
+          "title": "Pestañas y editores divididos",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/pesta%C3%B1as.png"
+          ]
+        },
+        {
+          "title": "La paleta de comandos",
+          "images": [],
+          "links": []
+        }
+      ],
+      "closed": true,
+      "focusReturned": true,
+      "escape": true
+    },
+    {
+      "id": "crear-archivos",
+      "steps": [
+        {
+          "title": "Abre una carpeta",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/proyecto.png"
+          ]
+        },
+        {
+          "title": "Crear archivos y carpetas",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/Explorer.png"
+          ]
+        },
+        {
+          "title": "La extensión decide el lenguaje",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Guardar",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Organiza el proyecto",
+          "images": [],
+          "links": []
+        }
+      ],
+      "closed": true,
+      "focusReturned": true,
+      "escape": true
+    },
+    {
+      "id": "configuracion",
+      "steps": [
+        {
+          "title": "Abrir los ajustes",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/preferencias.png"
+          ]
+        },
+        {
+          "title": "Usuario o workspace",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Interfaz gráfica o JSON",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Perfiles",
+          "images": [],
+          "links": []
+        }
+      ],
+      "closed": true,
+      "focusReturned": true,
+      "escape": true
+    },
+    {
+      "id": "extensiones",
+      "steps": [
+        {
+          "title": "¿Qué son?",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Instalar una",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/extensiones.png"
+          ]
+        },
+        {
+          "title": "Cuidado: son software de terceros",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Recomendar extensiones en un proyecto",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Habilitar, deshabilitar, desinstalar",
+          "images": [
+            {
+              "loaded": true,
+              "alt": true
+            }
+          ],
+          "links": [
+            "/src/assets/instalacion/deshabilitar.png"
+          ]
+        }
+      ],
+      "closed": true,
+      "focusReturned": true,
+      "escape": true
+    },
+    {
+      "id": "emmet",
+      "steps": [
+        {
+          "title": "Abreviatura + Tab",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Clases e id",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Hijo y hermano",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Repetir y numerar",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Texto y atributos",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Agrupar y leer",
+          "images": [],
+          "links": []
+        },
+        {
+          "title": "Plantilla HTML5",
+          "images": [],
+          "links": []
+        }
+      ],
+      "closed": true,
+      "focusReturned": true,
+      "escape": true
+    }
+  ],
+  "exercises": [
+    {
+      "exercise": 1,
+      "kind": "solution",
+      "value": "ul>li*5",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 1,
+      "kind": "alternative",
+      "value": "ul>li+li+li+li+li",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 1,
+      "kind": "wrong",
+      "value": "p{Incorrecto}",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 1,
+      "kind": "empty",
+      "value": "",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 1,
+      "kind": "invalid",
+      "value": ">",
+      "result": "⚠️ La abreviatura no es válida."
+    },
+    {
+      "exercise": 2,
+      "kind": "solution",
+      "value": "div#principal.contenedor",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 2,
+      "kind": "alternative",
+      "value": "div[class=contenedor id=principal]",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 2,
+      "kind": "wrong",
+      "value": "p{Incorrecto}",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 2,
+      "kind": "empty",
+      "value": "",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 2,
+      "kind": "invalid",
+      "value": ">",
+      "result": "⚠️ La abreviatura no es válida."
+    },
+    {
+      "exercise": 3,
+      "kind": "solution",
+      "value": "ul>li.producto$*5",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 3,
+      "kind": "alternative",
+      "value": "ul>li.producto1+li.producto2+li.producto3+li.producto4+li.producto5",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 3,
+      "kind": "wrong",
+      "value": "p{Incorrecto}",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 3,
+      "kind": "empty",
+      "value": "",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 3,
+      "kind": "invalid",
+      "value": ">",
+      "result": "⚠️ La abreviatura no es válida."
+    },
+    {
+      "exercise": 4,
+      "kind": "solution",
+      "value": "input[type=\"text\" name=\"usuario\" placeholder=\"Nombre de usuario\"]",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 4,
+      "kind": "alternative",
+      "value": "input[placeholder=\"Nombre de usuario\" name=usuario type=text]",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 4,
+      "kind": "wrong",
+      "value": "p{Incorrecto}",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 4,
+      "kind": "empty",
+      "value": "",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 4,
+      "kind": "invalid",
+      "value": ">",
+      "result": "⚠️ La abreviatura no es válida."
+    },
+    {
+      "exercise": 5,
+      "kind": "solution",
+      "value": "ul>li{Producto $}*5",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 5,
+      "kind": "alternative",
+      "value": "ul>li{Producto 1}+li{Producto 2}+li{Producto 3}+li{Producto 4}+li{Producto 5}",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 5,
+      "kind": "wrong",
+      "value": "p{Incorrecto}",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 5,
+      "kind": "empty",
+      "value": "",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 5,
+      "kind": "invalid",
+      "value": ">",
+      "result": "⚠️ La abreviatura no es válida."
+    },
+    {
+      "exercise": 6,
+      "kind": "solution",
+      "value": "nav.menu>ul>(li>a{Inicio})+(li>a{Productos})+(li>a{Servicios})+(li>a{Contacto})",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 6,
+      "kind": "alternative",
+      "value": "nav.menu>ul>li>a{Inicio}^li>a{Productos}^li>a{Servicios}^li>a{Contacto}",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 6,
+      "kind": "wrong",
+      "value": "p{Incorrecto}",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 6,
+      "kind": "empty",
+      "value": "",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 6,
+      "kind": "invalid",
+      "value": ">",
+      "result": "⚠️ La abreviatura no es válida."
+    },
+    {
+      "exercise": 7,
+      "kind": "solution",
+      "value": ".card*3>img+h2+p+a{Leer más}",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 7,
+      "kind": "alternative",
+      "value": "(div.card>img+h2+p+a{Leer más})*3",
+      "result": "✅ Correcto: genera el mismo HTML."
+    },
+    {
+      "exercise": 7,
+      "kind": "wrong",
+      "value": "p{Incorrecto}",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 7,
+      "kind": "empty",
+      "value": "",
+      "result": "❌ Todavía no: el HTML generado es distinto."
+    },
+    {
+      "exercise": 7,
+      "kind": "invalid",
+      "value": ">",
+      "result": "⚠️ La abreviatura no es válida."
+    }
+  ],
+  "quiz": [
+    {
+      "mode": "correct",
+      "question": 1,
+      "status": "Correcto. Ctrl+Shift+P abre la paleta de comandos. Ctrl+P sirve para saltar a un archivo.",
+      "disabled": 4
+    },
+    {
+      "mode": "correct",
+      "question": 2,
+      "status": "Correcto. El renombrado de símbolos entiende el lenguaje; el reemplazo de texto solo busca cadenas.",
+      "disabled": 4
+    },
+    {
+      "mode": "correct",
+      "question": 3,
+      "status": "Correcto. A+B crea A y B al mismo nivel. A>B pone B dentro de A.",
+      "disabled": 4
+    },
+    {
+      "mode": "correct",
+      "question": 4,
+      "status": "Correcto. ul>li*3 es una lista ul que contiene 3 elementos li.",
+      "disabled": 4
+    },
+    {
+      "mode": "correct",
+      "question": 5,
+      "status": "Correcto. Limita funciones como terminal, tareas, depuración o algunas extensiones hasta que confíes en la carpeta.",
+      "disabled": 4
+    },
+    {
+      "mode": "correct",
+      "final": "Has acertado 5 de 5."
+    },
+    {
+      "mode": "wrong",
+      "question": 1,
+      "status": "Respuesta incorrecta. Ctrl+Shift+P abre la paleta de comandos. Ctrl+P sirve para saltar a un archivo.",
+      "disabled": 4
+    },
+    {
+      "mode": "wrong",
+      "question": 2,
+      "status": "Respuesta incorrecta. El renombrado de símbolos entiende el lenguaje; el reemplazo de texto solo busca cadenas.",
+      "disabled": 4
+    },
+    {
+      "mode": "wrong",
+      "question": 3,
+      "status": "Respuesta incorrecta. A+B crea A y B al mismo nivel. A>B pone B dentro de A.",
+      "disabled": 4
+    },
+    {
+      "mode": "wrong",
+      "question": 4,
+      "status": "Respuesta incorrecta. ul>li*3 es una lista ul que contiene 3 elementos li.",
+      "disabled": 4
+    },
+    {
+      "mode": "wrong",
+      "question": 5,
+      "status": "Respuesta incorrecta. Limita funciones como terminal, tareas, depuración o algunas extensiones hasta que confíes en la carpeta.",
+      "disabled": 4
+    },
+    {
+      "mode": "wrong",
+      "final": "Has acertado 0 de 5."
+    },
+    {
+      "mode": "mixed",
+      "question": 1,
+      "status": "Correcto. Ctrl+Shift+P abre la paleta de comandos. Ctrl+P sirve para saltar a un archivo.",
+      "disabled": 4
+    },
+    {
+      "mode": "mixed",
+      "question": 2,
+      "status": "Respuesta incorrecta. El renombrado de símbolos entiende el lenguaje; el reemplazo de texto solo busca cadenas.",
+      "disabled": 4
+    },
+    {
+      "mode": "mixed",
+      "question": 3,
+      "status": "Correcto. A+B crea A y B al mismo nivel. A>B pone B dentro de A.",
+      "disabled": 4
+    },
+    {
+      "mode": "mixed",
+      "question": 4,
+      "status": "Respuesta incorrecta. ul>li*3 es una lista ul que contiene 3 elementos li.",
+      "disabled": 4
+    },
+    {
+      "mode": "mixed",
+      "question": 5,
+      "status": "Correcto. Limita funciones como terminal, tareas, depuración o algunas extensiones hasta que confíes en la carpeta.",
+      "disabled": 4
+    },
+    {
+      "mode": "mixed",
+      "final": "Has acertado 3 de 5."
+    }
+  ],
+  "layout": [
+    {
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  ],
+  "axe": [
+    {
+      "label": "home",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "label": "instalacion",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".dialogo-progreso"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.86 (foreground color: #1d75cd, background color: #11161f, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "label": "interfaz",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".dialogo-progreso"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.27 (foreground color: #671dcd, background color: #11161f, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "label": "crear-archivos",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "label": "configuracion",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".dialogo-nav > button:nth-child(2)"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.41 (foreground color: #ffffff, background color: #cd751d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "label": "extensiones",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "label": "emmet",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                ".dialogo-nav > button:nth-child(2)"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.41 (foreground color: #ffffff, background color: #cda11d, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "playground": [
+    {
+      "value": "ul>li*3",
+      "text": "2. Prueba tu propia abreviatura\nAbreviatura de Emmet\n<ul>\n\t<li></li>\n\t<li></li>\n\t<li></li>\n</ul>",
+      "active": null,
+      "injectedImages": 0
+    },
+    {
+      "value": "",
+      "text": "2. Prueba tu propia abreviatura\nAbreviatura de Emmet",
+      "active": null,
+      "injectedImages": 0
+    },
+    {
+      "value": "div[",
+      "text": "2. Prueba tu propia abreviatura\nAbreviatura de Emmet\n<div></div>",
+      "active": null,
+      "injectedImages": 0
+    },
+    {
+      "value": ">",
+      "text": "2. Prueba tu propia abreviatura\nAbreviatura de Emmet\n\nAbreviatura no válida. Revisa los operadores.",
+      "active": null,
+      "injectedImages": 0
+    },
+    {
+      "value": "img[src=x onerror=\"window.__audit=1\"]",
+      "text": "2. Prueba tu propia abreviatura\nAbreviatura de Emmet\n<img src=\"x\" alt=\"\" onerror=\"window.__audit=1\">",
+      "active": null,
+      "injectedImages": 0
+    }
+  ],
+  "anchors": [
+    {
+      "href": "#contenido",
+      "exists": true
+    },
+    {
+      "href": "#intro",
+      "exists": true
+    },
+    {
+      "href": "#ideas",
+      "exists": true
+    },
+    {
+      "href": "#atajos",
+      "exists": true
+    },
+    {
+      "href": "#demo",
+      "exists": true
+    },
+    {
+      "href": "#quiz",
+      "exists": true
+    },
+    {
+      "href": "#glosario",
+      "exists": true
+    },
+    {
+      "href": "#fuentes",
+      "exists": true
+    },
+    {
+      "href": "#ideas",
+      "exists": true
+    },
+    {
+      "href": "#demo",
+      "exists": true
+    }
+  ],
+  "motion": {
+    "before": "0.7s"
+  },
+  "published": {
+    "title": "VS Code y Emmet · PPS",
+    "guides": 6,
+    "status": "loaded",
+    "footer": "PPS · Grupo 3 · VS Code y Emmet\nIntegrantes: Alberto, Sandra, Raquel, Pablo C."
+  }
+}

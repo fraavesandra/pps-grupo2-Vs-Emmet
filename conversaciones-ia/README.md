@@ -27,3 +27,7 @@ La conversación de creación `creacion-skill-auto-proceso.md`, citada en docume
 Se ha localizado el registro local original del chat y se ha generado [04-conversacion-completa-codex-2026-10-23.md](04-conversacion-completa-codex-2026-10-23.md) automáticamente a partir de sus mensajes. Contiene 25 intervenciones de usuario/asistente hasta la solicitud de exportación, incluidas las confirmaciones de los formularios. Sustituye el extracto parcial como evidencia conversacional de esta prueba. El correo académico y el directorio personal se han sustituido por marcadores; se excluyen metadatos internos y llamadas/salidas de herramientas. El alcance exacto se explica en la cabecera. Las advertencias anteriores describen el estado previo a esta recuperación; no se borra su historial.
 
 Esta exportación corresponde a la prueba independiente, no a la conversación original de creación de la skill, que sigue ausente.
+
+## Auditoría del 26 de octubre de 2026
+
+[06-auditoria-codex-2026-10-26.md](06-auditoria-codex-2026-10-26.md) exporta mecánicamente los mensajes originales disponibles del usuario y Codex, con exclusiones y marcadores de privacidad descritos en su cabecera. El corte es anterior al commit/push y respuesta final; para conservar el cierre debe repetirse la exportación del historial original al terminar. [Informe y límites](../evidencias/auditoria/informe.md). No sustituye ni reconstruye la conversación de creación ausente.

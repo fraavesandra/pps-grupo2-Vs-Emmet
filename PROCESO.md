@@ -203,3 +203,49 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - src/assets/instalacion/extensiones.png
 - src/assets/instalacion/deshabilitar.png
 - PROCESO.md
+
+## Fase 4: Verificar — Auditoría de seguridad, funcionalidad, accesibilidad y didáctica
+
+**Fecha:** 2026-10-26
+
+**Objetivo:** Auditar la versión existente del commit `33ad6893ec9c1e7558a3cb1abde14d744c40428d`, conservar evidencias y proponer correcciones sin modificar la aplicación ni la skill.
+
+**Herramienta:** Codex para revisión y documentación; Git, Node/npm, Chrome/Playwright, Safari y axe-core para comprobaciones locales; consultas de solo lectura a documentación oficial y Pages.
+
+**Prompt:** “Usa obligatoriamente nuestra skill skills/auto-proceso/SKILL.md. Léela antes de actuar y respeta sus pasos, validaciones y sincronización. […] No apliques correcciones a la aplicación durante esta auditoría: presenta primero los hallazgos y el plan de solución.” Solicitud completa conservada en la exportación original enlazada.
+
+**Resultado:** Plan previo, matriz, pruebas reproducibles, resultados y nueve hallazgos confirmados. Funcionan seis guías, soluciones canónicas de siete ejercicios y tres recorridos de quiz; fallan dos alternativas equivalentes, contraste en cuatro primeros pasos, movimiento reducido, un enlace y coherencia documental. Se detectaron rutas personales existentes y expansión sin límite que alcanzó el timeout del proceso aislado.
+
+**Decisión:** Conservar la versión auditada y presentar el plan de corrección por prioridad. Publicar únicamente documentación, pruebas y evidencias revisadas de esta auditoría, conforme a la autorización expresa; no corregir aplicación, skills ni reescribir historial compartido.
+
+**Justificación:** Distinguir fallos reproducidos de sospechas y mejoras, evitar pérdida de trabajo del equipo y no confundir build correcto con seguridad o accesibilidad certificadas.
+
+**Verificación:** Estado Git limpio y pull fast-forward actualizado. Plan guardado antes de pruebas. Build/lint con exit 0, npm audit sin avisos conocidos, Chrome local con 30 pasos y diez imágenes cargadas; ejercicios canónicos/alternativas/errores/vacíos; quiz 5/5, 0/5 y 3/5 con reinicio; axe y comprobación manual de foco/diálogo; Safari con prueba básica. Emmet adversario solo en procesos locales limitados. Pages solo carga ordinaria y cabeceras. Revisión de 114 objetos Git únicos y capturas actuales; evidencias nuevas sin valores privados. Zoom, lector real, móviles físicos, entorno CI Node 22, apuntes ausentes y ajustes administrativos no comprobados. Validaciones y estado de entrega en `evidencias/auditoria/validacion.json` y `evidencias/auditoria/entrega.md`; no se declara un push antes de verificarlo.
+
+**Participación:** Alberto M., confirmado por el usuario.
+
+**Conversación de origen:** [06-auditoria-codex-2026-10-26.md](conversaciones-ia/06-auditoria-codex-2026-10-26.md), exportación directa del historial original hasta el corte indicado, con exclusiones explícitas.
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `conversaciones-ia/README.md`
+- `conversaciones-ia/06-auditoria-codex-2026-10-26.md`
+- `evidencias/auditoria/plan.md`
+- `evidencias/auditoria/informe.md`
+- `evidencias/auditoria/matriz.md`
+- `evidencias/auditoria/browser-test.mjs`
+- `evidencias/auditoria/browser-resultados.json`
+- `evidencias/auditoria/emmet-test.mjs`
+- `evidencias/auditoria/emmet-resultados.json`
+- `evidencias/auditoria/exportar-conversacion.py`
+- `evidencias/auditoria/build.txt`
+- `evidencias/auditoria/lint.txt`
+- `evidencias/auditoria/dependencias.txt`
+- `evidencias/auditoria/npm-audit.json`
+- `evidencias/auditoria/enlaces.json`
+- `evidencias/auditoria/privacidad.json`
+- `evidencias/auditoria/local-1280.png`
+- `evidencias/auditoria/local-375.png`
+- `evidencias/auditoria/local-320.png`
+- `evidencias/auditoria/validacion.json`
+- `evidencias/auditoria/entrega.md`
