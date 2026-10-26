@@ -321,3 +321,46 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `conversaciones-ia/web-vscode-emmet-claude.md`
 - `conversaciones-ia/brin_storming.md`
 - `PROCESO.md`
+
+
+---
+
+## Fase 4: Verificar — Corrección de incidencias de auditoría (seguridad, accesibilidad, validación y privacidad)
+
+**Fecha:** 2026-10-26
+
+**Objetivo:** Resolver los hallazgos confirmados en la auditoría técnica previa (AUD-01 a AUD-06) para alinear plenamente la aplicación web y el repositorio con los criterios de evaluación de la rúbrica (privacidad, accesibilidad WCAG, robustez didáctica y coherencia documental).
+
+**Herramienta:** Antigravity (Google / Claude) en VS Code. Se empleó para analizar el informe de auditoría (`evidencias/auditoria/informe.md`), sanitizar recursos gráficos, corregir la lógica de validación HTML en React, implementar límites de contención en Emmet y ajustar estilos CSS de contraste y accesibilidad motora.
+
+**Prompt:** "hazme los cambios y usa la skil para documentarlo"
+
+**Resultado:** Se subsanaron satisfactoriamente las siguientes incidencias:
+1. **AUD-05 (Privacidad):** Se sanitizó la captura `src/assets/instalacion/Diagrama anotado de Visual Studio Code.png`, ocultando con el color de fondo del editor el área de la consola terminal que revelaba una ruta de perfil personal local.
+2. **AUD-06 (Coherencia de grupo y formato):** En `src/components/Footer.jsx` se corrigieron los nombres para incluir nombre de pila e inicial del primer apellido para todos los integrantes (`Alberto M., Sandra F., Raquel G., Pablo C.`) y se unificó la nomenclatura oficial a `Grupo 2 (Bloque 3)`. En `README.md` se actualizó la referencia a las 6 guías e ideas clave interactivas.
+3. **AUD-02 (Corrección estructural en ejercicios):** En `src/components/Ejercicios.jsx` se sustituyó la comparación de cadenas rígida por una comparación de árboles DOM recursiva (`sonHtmlEquivalentes`). Ahora se evalúan etiquetas, atributos y valores de manera independiente del orden en que se redacten los atributos en la abreviatura.
+4. **AUD-01 (Límite de disponibilidad en Emmet):** Se incorporó en `src/components/Playground.jsx` y `src/components/Ejercicios.jsx` un filtro previo que restringe las expansiones con multiplicador superior a 50 repeticiones (`*50`) o entradas mayores de 500 caracteres, evitando congelaciones de la interfaz del navegador.
+5. **AUD-03 y AUD-04 (Accesibilidad visual y de movimiento):** En `src/styles.css` se elevaron los ratios de contraste para `.dialogo-progreso` y `.dialogo-nav button` (asegurando el cumplimiento del ratio mínimo 4.5:1), y se desactivó la transición y escala decorativa de `.guia::before` bajo la directiva `@media (prefers-reduced-motion: reduce)`.
+6. **Limpieza documental:** Se regularizó la extensión de `conversaciones-ia/web-vscode-emmet-claude.md` y se eliminó el archivo residual vacío `conversaciones-ia/brin_storming.md`.
+
+**Decisión:** Se aceptaron e integraron todas las recomendaciones del informe de auditoría sin alterar la estructura general ni los contenidos aprobados por el equipo.
+
+**Justificación:** Eliminar datos personales es una exigencia obligatoria de la Sección 7 del enunciado; permitir que la corrección de ejercicios acepte atributos en cualquier orden evita penalizaciones didácticas injustas a los estudiantes; y los límites de Emmet garantizan la resiliencia del sitio web.
+
+**Verificación:** Comprobación de la integridad del PNG sanitizado con `file`, inspección de las reglas CSS de alto contraste y verificación del algoritmo de comparación de nodos DOM.
+
+**Participación:** Sandra F. (implementación y documentación), sobre la auditoría previa de Alberto M., Pablo C. y Raquel G.
+
+**Conversación de origen:** `conversaciones-ia/despliegue-produccion.md`
+
+**Archivos afectados:**
+- `src/assets/instalacion/Diagrama anotado de Visual Studio Code.png`
+- `src/components/Footer.jsx`
+- `src/components/Ejercicios.jsx`
+- `src/components/Playground.jsx`
+- `src/styles.css`
+- `README.md`
+- `conversaciones-ia/web-vscode-emmet-claude.md`
+- `conversaciones-ia/brin_storming.md`
+- `PROCESO.md`
+
