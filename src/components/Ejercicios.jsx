@@ -32,6 +32,7 @@ function Ejercicio({ ejercicio, numero }) {
       <div className="fila">
         <input
           id={`resp-${numero}`}
+          name={`respuesta-${numero}`}
           type="text"
           value={respuesta}
           onChange={(e) => { setRespuesta(e.target.value); setEstado(null) }}

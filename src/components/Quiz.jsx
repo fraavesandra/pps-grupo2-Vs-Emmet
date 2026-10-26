@@ -35,6 +35,13 @@ export default function Quiz() {
     <section id="quiz" aria-labelledby="quiz-titulo">
       <h2 id="quiz-titulo">Mini quiz</h2>
       <div className="tarjeta">
+        <p role="status" aria-atomic="true">
+          {terminado
+            ? `Has acertado ${aciertos} de ${preguntasQuiz.length}.`
+            : elegida !== null
+              ? `${elegida === p.correcta ? 'Correcto.' : 'Respuesta incorrecta.'} ${p.explicacion}`
+              : ''}
+        </p>
         {terminado ? (
           <>
             <p className="lead">
@@ -68,8 +75,7 @@ export default function Quiz() {
               })}
             </ul>
             {elegida !== null && (
-              <div role="status">
-                <p>{p.explicacion}</p>
+              <div>
                 <button type="button" onClick={siguiente}>
                   {actual + 1 < preguntasQuiz.length ? 'Siguiente' : 'Ver resultado'}
                 </button>

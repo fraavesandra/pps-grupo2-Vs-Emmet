@@ -127,3 +127,155 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `evidencias/fuentes.md`
 - `evidencias/prueba-skill-propia.md`
 - `.github/workflows/deploy.yml`
+
+
+---
+
+## Fase 4: Verificar — Revisión técnica y prueba independiente de auto-proceso
+
+**Fecha:** 2026-10-23
+
+**Objetivo:** Documentar la revisión real del repositorio y comprobar que la skill auto-proceso produce una entrada trazable en una conversación distinta de la utilizada para crearla.
+
+**Herramienta:** Codex, para inspeccionar el repositorio, ejecutar las comprobaciones técnicas y aplicar las instrucciones de la skill existente sin modificarlas.
+
+**Prompt:** "Haz la Prueba independiente de la skill propia y documéntala, respeta los parámetros de la propia skill". Se confirmaron Fase 4: Verificar, herramienta Codex y participación de Alberto M.
+
+**Resultado:** Se revisaron el enunciado, el código y las evidencias. La instalación con lockfile, la compilación y el linter finalizaron correctamente; la web publicada cargó en navegador. Se detectaron la conversación de creación ausente, registros parciales y la necesidad de una prueba independiente. Para esta prueba se guardó un protocolo previo a la generación de esta entrada, un registro de conversación con límites explícitos y la comparación de resultados en evidencias/prueba-skill-propia.md.
+
+**Decisión:** Conservar el registro histórico de la primera prueba y añadir una segunda prueba independiente. Mantener la skill original, documentar las limitaciones y distinguir las comprobaciones de esta sesión de las pruebas previas de móvil y teclado del equipo.
+
+**Justificación:** El enunciado exige probar la skill fuera de su conversación de creación y comparar el resultado con expectativas previas. Una entrada basada en comandos ejecutados y observaciones concretas permite evaluar su utilidad sin inventar resultados ni participación.
+
+**Verificación:** `git pull origin main` indicó `Already up to date`; se revisaron los últimos diez commits, el diff del último commit y el estado inicialmente limpio. En la revisión de esta conversación, `npm ci --ignore-scripts --no-audit --no-fund`, `npm run build` y `npm run lint` devolvieron código 0. Se observó la carga de GitHub Pages. La validación posterior confirmó nueve campos no vacíos, cinco archivos existentes, texto anterior preservado y ambas copias de la skill intactas; `git diff --check` pasó. Se creó el commit local `fa624b2`. El push falló con código 128 porque Git no dispone de credenciales HTTPS en la terminal; la sincronización remota queda pendiente. Los resultados completos se recogen en la evidencia. No se presenta esta revisión como una nueva auditoría completa de accesibilidad o de interacciones.
+
+**Participación:** Alberto M., confirmado por el usuario en esta conversación.
+
+**Conversación de origen:** `conversaciones-ia/03-prueba-independiente-auto-proceso.md` (mensajes conservados y registro técnico; límites de exportación explicitados en `conversaciones-ia/README.md`).
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `evidencias/protocolo-prueba-independiente.md`
+- `evidencias/prueba-skill-propia.md`
+- `conversaciones-ia/03-prueba-independiente-auto-proceso.md`
+- `conversaciones-ia/README.md`
+
+## Fase 3: Investigar y producir — Creación de la sección del glosario
+
+**Fecha:** 2026-10-25
+**Objetivo:** Incorporar una sección de consulta con definiciones de los términos utilizados en la web didáctica sobre Visual Studio Code y Emmet.
+**Herramienta:** Codex, según lo indicado por Raquel G.
+**Prompt:** No se dispone del prompt original de creación. Solicitud de documentación: "Documenta que he creado la sección del glosario. Usé codex. Participé yo, Raquel G."
+**Resultado:** Se incorporó una sección de glosario con diez términos: IDE, Workspace, Command Palette, IntelliSense, Extensión, settings.json, Restricted Mode, Emmet, Abreviatura y Linter. El componente muestra los términos y sus definiciones mediante una lista de descripción.
+**Decisión:** Incorporar el glosario a la página como sección de consulta, según la creación comunicada por Raquel G.
+**Justificación:** Facilitar la comprensión del vocabulario técnico y permitir consultar las definiciones durante el aprendizaje.
+**Verificación:** Se inspeccionaron src/components/Glosario.jsx y los diez términos definidos en src/data/contenido.js. Se comprobó que src/App.jsx importa y muestra el componente Glosario. Esta comprobación verifica la integración en el código; no incluye una revisión visual ni una validación de las definiciones con fuentes externas.
+**Participación:** Raquel G., única participante confirmada.
+**Conversación de origen:** N/A.
+**Archivos afectados:**
+- src/components/Glosario.jsx
+- src/data/contenido.js
+- src/App.jsx
+- PROCESO.md
+
+## Fase 3: Investigar y producir — Ampliación de las guías con capturas e instrucciones
+
+**Fecha:** 2026-10-25
+**Objetivo:** Ampliar las explicaciones de Ideas principales con capturas de VS Code e instrucciones que permitan identificar dónde pulsar en cada tarea.
+**Herramienta:** Codex, para integrar las capturas aportadas por Raquel G., redactar pies de foto y ajustar el orden del contenido del tutorial.
+**Prompt:** "Quiero que me ayudes a incorporar en las secciones de ideas principales más contenido, empezando por la instalación [...] añadir una guía para instalarlo con imágenes". Después se solicitaron capturas para Interfaz, Crear archivos, Configuración y Extensiones, y ajustes en su colocación.
+**Resultado:** Se amplió Instalación con instrucciones de descarga, un enlace oficial y capturas de descarga y apertura de carpetas, ya recogidas en el commit d5ad108. Se añadieron el diagrama de la interfaz, Explorer y pestañas a Interfaz; se reutilizaron las capturas de abrir carpeta y Explorer en Crear archivos; se incorporó Preferencias en Configuración y las capturas de búsqueda y deshabilitación en Extensiones. Las imágenes incluyen texto alternativo, pie explicativo y acceso a tamaño completo. Se ajustó el tutorial para mostrar el código antes de las imágenes salvo en el paso de Preferencias, donde la imagen precede al comando.
+**Decisión:** Utilizar las capturas aportadas por Raquel G. y colocarlas en los pasos indicados. Se retiró la aclaración del diagrama tras su sustitución por una imagen corregida y se movió la captura de búsqueda de extensiones del paso 1 al paso 2, según sus indicaciones.
+**Justificación:** Relacionar las explicaciones con elementos visibles del editor facilita seguir la guía. Reutilizar las capturas evita duplicar recursos y permite mantener ejemplos coherentes entre secciones.
+**Verificación:** Se revisaron el diff, las importaciones de imágenes y los archivos existentes. La compilación mediante npm.cmd run build terminó con código 0 e incluyó las ocho imágenes utilizadas. Se comprobaron en el código el orden del ejemplo de carpetas y la excepción de Preferencias. No se realizó una comprobación visual del tutorial en navegador en esta revisión.
+**Participación:** Raquel G., única participante confirmada.
+**Conversación de origen:** N/A.
+**Archivos afectados:**
+- src/data/contenido.js
+- src/components/TutorialDialog.jsx
+- src/styles.css
+- src/assets/instalacion/visual.png
+- src/assets/instalacion/proyecto.png
+- src/assets/instalacion/Diagrama anotado de Visual Studio Code.png
+- src/assets/instalacion/Explorer.png
+- src/assets/instalacion/pestañas.png
+- src/assets/instalacion/preferencias.png
+- src/assets/instalacion/extensiones.png
+- src/assets/instalacion/deshabilitar.png
+- PROCESO.md
+
+## Fase 4: Verificar — Auditoría de seguridad, funcionalidad, accesibilidad y didáctica
+
+**Fecha:** 2026-10-26
+
+**Objetivo:** Auditar la versión existente del commit `33ad6893ec9c1e7558a3cb1abde14d744c40428d`, conservar evidencias y proponer correcciones sin modificar la aplicación ni la skill.
+
+**Herramienta:** Codex para revisión y documentación; Git, Node/npm, Chrome/Playwright, Safari y axe-core para comprobaciones locales; consultas de solo lectura a documentación oficial y Pages.
+
+**Prompt:** “Usa obligatoriamente nuestra skill skills/auto-proceso/SKILL.md. Léela antes de actuar y respeta sus pasos, validaciones y sincronización. […] No apliques correcciones a la aplicación durante esta auditoría: presenta primero los hallazgos y el plan de solución.” Solicitud completa conservada en la exportación original enlazada.
+
+**Resultado:** Plan previo, matriz, pruebas reproducibles, resultados y nueve hallazgos confirmados. Funcionan seis guías, soluciones canónicas de siete ejercicios y tres recorridos de quiz; fallan dos alternativas equivalentes, contraste en cuatro primeros pasos, movimiento reducido, un enlace y coherencia documental. Se detectaron rutas personales existentes y expansión sin límite que alcanzó el timeout del proceso aislado.
+
+**Decisión:** Conservar la versión auditada y presentar el plan de corrección por prioridad. Publicar únicamente documentación, pruebas y evidencias revisadas de esta auditoría, conforme a la autorización expresa; no corregir aplicación, skills ni reescribir historial compartido.
+
+**Justificación:** Distinguir fallos reproducidos de sospechas y mejoras, evitar pérdida de trabajo del equipo y no confundir build correcto con seguridad o accesibilidad certificadas.
+
+**Verificación:** Estado Git limpio y pull fast-forward actualizado. Plan guardado antes de pruebas. Build/lint con exit 0, npm audit sin avisos conocidos, Chrome local con 30 pasos y diez imágenes cargadas; ejercicios canónicos/alternativas/errores/vacíos; quiz 5/5, 0/5 y 3/5 con reinicio; axe y comprobación manual de foco/diálogo; Safari con prueba básica. Emmet adversario solo en procesos locales limitados. Pages solo carga ordinaria y cabeceras. Revisión de 114 objetos Git únicos y capturas actuales; evidencias nuevas sin valores privados. Zoom, lector real, móviles físicos, entorno CI Node 22, apuntes ausentes y ajustes administrativos no comprobados. Validaciones y estado de entrega en `evidencias/auditoria/validacion.json` y `evidencias/auditoria/entrega.md`; El commit local `e9bc27d` conserva los 22 archivos; el push falló con código 128 por ausencia de credenciales HTTPS en la terminal. La publicación queda bloqueada y el cierre se registra localmente, sin afirmar sincronización remota.
+
+**Participación:** Alberto M., confirmado por el usuario.
+
+**Conversación de origen:** [06-auditoria-codex-2026-10-26.md](conversaciones-ia/06-auditoria-codex-2026-10-26.md), exportación directa del historial original hasta el corte indicado, con exclusiones explícitas.
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `conversaciones-ia/README.md`
+- `conversaciones-ia/06-auditoria-codex-2026-10-26.md`
+- `evidencias/auditoria/plan.md`
+- `evidencias/auditoria/informe.md`
+- `evidencias/auditoria/matriz.md`
+- `evidencias/auditoria/browser-test.mjs`
+- `evidencias/auditoria/browser-resultados.json`
+- `evidencias/auditoria/emmet-test.mjs`
+- `evidencias/auditoria/emmet-resultados.json`
+- `evidencias/auditoria/exportar-conversacion.py`
+- `evidencias/auditoria/build.txt`
+- `evidencias/auditoria/lint.txt`
+- `evidencias/auditoria/dependencias.txt`
+- `evidencias/auditoria/npm-audit.json`
+- `evidencias/auditoria/enlaces.json`
+- `evidencias/auditoria/privacidad.json`
+- `evidencias/auditoria/local-1280.png`
+- `evidencias/auditoria/local-375.png`
+- `evidencias/auditoria/local-320.png`
+- `evidencias/auditoria/validacion.json`
+- `evidencias/auditoria/entrega.md`
+
+
+## Fase 4: Verificar — Conservación de la conversación y comprobación de la subida
+
+**Fecha:** 2026-10-26
+
+**Objetivo:** Completar el registro original de la conversación de auditoría y conservar la comprobación de su publicación.
+
+**Herramienta:** Codex, para exportar los mensajes del historial original JSONL y comprobar las referencias de Git.
+
+**Prompt:** “Registra y guarda esta conversación en su apartado en .md”. Previamente: “Ok, está. Comprueba”.
+
+**Resultado:** Se amplió la exportación Markdown con el cierre de auditoría, la confirmación del usuario y la verificación de la subida. El remoto main y el HEAD local coincidían en `4ff2f5f1288b3b661d273e37a42d6a75113d79f8`, que incluye el commit de auditoría `e9bc27d`.
+
+**Decisión:** Actualizar el archivo de conversación existente, mantener el fallo inicial de push como hecho histórico y añadir el resultado de la comprobación posterior.
+
+**Justificación:** Conservar el intercambio original y sus confirmaciones permite contrastar la auditoría sin presentar un resumen como transcripción ni dejar el estado de publicación sin aclarar.
+
+**Verificación:** Git inicialmente limpio; pull fast-forward indicó Already up to date. Exportación mecánica hasta la petición de guardado incluida, con exclusiones explícitas y marcadores de privacidad. Se comprobaron los nueve campos, archivos referenciados, ausencia de rutas personales y patrones de secretos en los textos nuevos y git diff --check. No se repitieron pruebas de aplicación ni se modificó la skill.
+
+**Participación:** Alberto M., confirmado para esta auditoría.
+
+**Conversación de origen:** [06-auditoria-codex-2026-10-26.md](conversaciones-ia/06-auditoria-codex-2026-10-26.md).
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `conversaciones-ia/06-auditoria-codex-2026-10-26.md`
+- `conversaciones-ia/README.md`
+- `evidencias/auditoria/exportar-conversacion.py`
+- `evidencias/auditoria/entrega.md`

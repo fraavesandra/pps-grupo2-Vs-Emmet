@@ -8,7 +8,7 @@ export default function Playground() {
   let error = ''
   try {
     html = abreviatura.trim() ? expand(abreviatura) : ''
-  } catch (e) {
+  } catch {
     error = 'Abreviatura no válida. Revisa los operadores.'
   }
 
@@ -18,6 +18,7 @@ export default function Playground() {
       <label htmlFor="emmet-input">Abreviatura de Emmet</label>
       <input
         id="emmet-input"
+        name="abreviatura-emmet"
         type="text"
         value={abreviatura}
         onChange={(e) => setAbreviatura(e.target.value)}
@@ -29,10 +30,6 @@ export default function Playground() {
       ) : (
         <pre className="codigo" aria-live="polite"><code>{html}</code></pre>
       )}
-      <p className="nota">
-        Esta demo usa la librería <code>emmet</code>. Comprobad en VS Code que
-        el resultado coincide con el de Tab.
-      </p>
     </div>
   )
 }

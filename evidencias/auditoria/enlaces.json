@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://code.visualstudio.com/Download",
+    "result": "200 https://code.visualstudio.com/Download",
+    "exit": 0
+  },
+  {
+    "url": "https://code.visualstudio.com/docs",
+    "result": "200 https://code.visualstudio.com/docs",
+    "exit": 0
+  },
+  {
+    "url": "https://code.visualstudio.com/docs/editing/emmet",
+    "result": "404 https://code.visualstudio.com/docs/editing/emmet",
+    "exit": 0
+  },
+  {
+    "url": "https://code.visualstudio.com/docs/editing/workspaces/workspace-trust",
+    "result": "200 https://code.visualstudio.com/docs/editing/workspaces/workspace-trust",
+    "exit": 0
+  },
+  {
+    "url": "https://docs.emmet.io/",
+    "result": "200 https://docs.emmet.io/",
+    "exit": 0
+  },
+  {
+    "url": "https://lucide.dev/",
+    "result": "200 https://lucide.dev/",
+    "exit": 0
+  },
+  {
+    "url": "https://react.dev/",
+    "result": "200 https://react.dev/",
+    "exit": 0
+  },
+  {
+    "url": "https://vite.dev/",
+    "result": "200 https://vite.dev/",
+    "exit": 0
+  },
+  {
+    "url": "https://www.npmjs.com/package/emmet",
+    "result": "403 https://www.npmjs.com/package/emmet",
+    "exit": 0
+  }
+]

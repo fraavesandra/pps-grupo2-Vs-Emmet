@@ -1,38 +1,281 @@
-export const ideasClave = [
+import descargaVscode from '../assets/instalacion/visual.png'
+import abrirProyecto from '../assets/instalacion/proyecto.png'
+import diagramaInterfaz from '../assets/instalacion/Diagrama anotado de Visual Studio Code.png'
+import explorerInterfaz from '../assets/instalacion/Explorer.png'
+import pestanasInterfaz from '../assets/instalacion/pestañas.png'
+import preferenciasConfiguracion from '../assets/instalacion/preferencias.png'
+import extensionesVista from '../assets/instalacion/extensiones.png'
+import deshabilitarExtension from '../assets/instalacion/deshabilitar.png'
+
+export const guias = [
   {
-    titulo: 'Un editor extensible, no un IDE completo',
-    texto:
-      'VS Code nace como editor de código. Las extensiones le añaden lo que un IDE trae de serie: soporte de lenguajes, depuradores, linters, etc.',
+    id: 'instalacion',
+    titulo: 'Instalación',
+    tono: 210,
+    pasos: [
+      {
+        titulo: '¿Qué es VS Code?',
+        texto:
+          'Es un editor de código de Microsoft. Es multiplataforma y se amplía con extensiones, que le añaden soporte de lenguajes, depuradores y otras herramientas.',
+      },
+      {
+        titulo: 'Descargarlo',
+        texto:
+          'Abre la página oficial de descarga. Encontrarás tres tarjetas con las opciones para Windows, macOS y Linux. Elige el botón que corresponde al sistema del ordenador donde vas a instalar VS Code.',
+        enlace: {
+          url: 'https://code.visualstudio.com/Download',
+          texto: 'Abrir la página oficial de descarga',
+        },
+        imagen: {
+          src: descargaVscode,
+          alt: 'Página de descarga de Visual Studio Code con las tarjetas de Windows, macOS y Linux enmarcadas en rojo.',
+          pie: 'Elige la descarga de tu sistema en la zona marcada en rojo. Pulsa la imagen para ampliarla.',
+        },
+        instrucciones: [
+          'En Windows, pulsa el botón azul «Windows» de la tarjeta de la izquierda.',
+          'En macOS, pulsa «Mac Universal» en la tarjeta central.',
+          'En Linux, elige «Debian/Ubuntu» o «Red Hat/Fedora» según tu distribución.',
+          'Espera a que termine la descarga y localiza el archivo en la carpeta Descargas de tu navegador.',
+        ],
+      },
+      {
+        titulo: 'Stable o Insiders',
+        texto:
+          'Stable es la versión para el uso habitual. Insiders recibe los cambios antes, pero puede tener errores. Se pueden instalar las dos a la vez; para clase, usa Stable.',
+      },
+      {
+        titulo: 'Abrir tu primer proyecto',
+        texto:
+          'En VS Code, pulsa Archivo → Abrir carpeta…, como se señala en la captura. Selecciona la carpeta de tu proyecto y confirma la selección. Trabaja siempre con la carpeta del proyecto, no con archivos sueltos: así VS Code conoce todo su contexto.',
+        codigo: 'File → Open Folder',
+        imagen: {
+          src: abrirProyecto,
+          alt: 'Menú Archivo de VS Code con Archivo y la opción Abrir carpeta señalados en rojo.',
+          pie: 'Abre Archivo → Abrir carpeta… para seleccionar tu proyecto. Pulsa la imagen para ampliarla.',
+        },
+      },
+    ],
   },
   {
-    titulo: 'Se trabaja con la carpeta del proyecto',
-    texto:
-      'Abrir la carpeta (File → Open Folder) en vez de archivos sueltos permite que VS Code conozca todo el proyecto: Explorer, búsqueda global y configuración propia en .vscode/.',
+    id: 'interfaz',
+    titulo: 'Interfaz',
+    tono: 265,
+    pasos: [
+      {
+        titulo: 'Las cinco zonas',
+        texto:
+          'La ventana se divide en barra de actividad, barra lateral, editor, panel inferior y barra de estado.',
+        imagen: {
+          src: diagramaInterfaz,
+          alt: 'Diagrama de VS Code con el explorador a la izquierda, el editor en el centro, el panel inferior y la barra de estado abajo.',
+          pie: 'Pulsa el diagrama para ampliarlo.',
+        },
+      },
+      {
+        titulo: 'Barra de actividad',
+        texto:
+          'Da acceso a Explorer, Search, Source Control, Run and Debug y Extensions. Cada icono cambia el contenido de la barra lateral.',
+      },
+      {
+        titulo: 'Explorer',
+        texto:
+          'Muestra los archivos y carpetas del proyecto. Desde aquí puedes crear, renombrar, mover y eliminar.',
+        codigo: 'proyecto/\n├── src/\n│   └── main.py\n└── README.md',
+        imagen: {
+          src: explorerInterfaz,
+          alt: 'Explorador de VS Code con su acceso y los cuatro iconos de gestión del árbol de archivos señalados en rojo.',
+          pie: 'De izquierda a derecha: Nuevo archivo, para crear un archivo; Nueva carpeta, para crear una carpeta; Actualizar, para refrescar el árbol de archivos; y Contraer todo, para plegar las carpetas desplegadas. Pulsa la imagen para ampliarla.',
+        },
+      },
+      {
+        titulo: 'Pestañas y editores divididos',
+        texto:
+          'Cada archivo abierto aparece como una pestaña. Puedes dividir el área de edición para ver varios archivos a la vez.',
+        imagen: {
+          src: pestanasInterfaz,
+          alt: 'VS Code con dos grupos de editores en paralelo y las pestañas de PROCESO.md e index.html y el icono de dividir editor señalados en rojo.',
+          pie: 'Las pestañas permiten cambiar de archivo. El icono Dividir editor, señalado arriba a la derecha, permite abrir otro grupo para trabajar con archivos en paralelo. Pulsa la imagen para ampliarla.',
+        },
+      },
+      {
+        titulo: 'La paleta de comandos',
+        texto:
+          'Es el buscador de acciones de VS Code. Si no sabes dónde está una función, escríbela aquí.',
+        codigo: 'Ctrl + Shift + P',
+      },
+    ],
   },
   {
-    titulo: 'La paleta de comandos lo encuentra todo',
-    texto:
-      'Con Ctrl+Shift+P escribes lo que quieres hacer y VS Code lo localiza. Con Ctrl+P saltas a cualquier archivo. No hace falta memorizar menús.',
+    id: 'crear-archivos',
+    titulo: 'Crear archivos',
+    tono: 150,
+    pasos: [
+      {
+        titulo: 'Abre una carpeta',
+        texto:
+          'Antes de crear nada, abre la carpeta del proyecto para que los archivos nuevos queden dentro de ella.',
+        codigo: 'File → Open Folder',
+        imagen: {
+          src: abrirProyecto,
+          alt: 'Menú Archivo de VS Code con Archivo y la opción Abrir carpeta señalados en rojo.',
+          pie: 'Pulsa Archivo → Abrir carpeta… y selecciona la carpeta de tu proyecto. Pulsa la imagen para ampliarla.',
+        },
+      },
+      {
+        titulo: 'Crear archivos y carpetas',
+        texto:
+          'En el Explorer, usa los iconos de nuevo archivo y nueva carpeta, o haz clic derecho sobre la carpeta donde quieras crearlos.',
+        imagen: {
+          src: explorerInterfaz,
+          alt: 'Explorador de VS Code con los iconos de nuevo archivo, nueva carpeta, actualizar y contraer todo señalados en rojo.',
+          pie: 'De izquierda a derecha: Nuevo archivo, Nueva carpeta, Actualizar y Contraer todo. Selecciona primero la carpeta donde quieres crear el archivo o la subcarpeta. Pulsa la imagen para ampliarla.',
+        },
+      },
+      {
+        titulo: 'La extensión decide el lenguaje',
+        texto:
+          'VS Code detecta el lenguaje por la extensión del nombre: index.html es HTML, style.css es CSS, main.py es Python. Se puede cambiar a mano con "Change Language Mode".',
+      },
+      {
+        titulo: 'Guardar',
+        texto:
+          'Guarda el archivo actual con Ctrl+S, o todos los abiertos con Ctrl+K y después S.',
+        codigo: 'Ctrl + S',
+      },
+      {
+        titulo: 'Organiza el proyecto',
+        texto:
+          'Una estructura sencilla ayuda: el código en src, las pruebas en tests, la documentación en docs y las imágenes en img.',
+        codigo:
+          'mi-proyecto/\n├── src/\n├── tests/\n├── docs/\n├── img/\n└── README.md',
+      },
+    ],
   },
   {
-    titulo: 'Editar de forma eficiente',
-    texto:
-      'Múltiples cursores, seleccionar todas las coincidencias, IntelliSense y formatear el documento ahorran mucho tiempo. F2 renombra símbolos entendiendo el lenguaje, algo que un buscar y reemplazar no hace.',
+    id: 'configuracion',
+    titulo: 'Configuración',
+    tono: 30,
+    pasos: [
+      {
+        titulo: 'Abrir los ajustes',
+        texto:
+          'Desde el menú File → Preferences → Settings, o desde la paleta de comandos.',
+        imagenAntesDelCodigo: true,
+        imagen: {
+          src: preferenciasConfiguracion,
+          alt: 'Menú de VS Code con Archivo, Preferencias y Configuración señalados en rojo.',
+          pie: 'Abre Archivo → Preferencias → Configuración. También puedes usar la paleta de comandos como se indica debajo. Pulsa la imagen para ampliarla.',
+        },
+        codigo: 'Ctrl + Shift + P  >  Preferences: Open Settings (UI)',
+      },
+      {
+        titulo: 'Usuario o workspace',
+        texto:
+          'Los ajustes de usuario se aplican a todos tus proyectos. Los de workspace solo al proyecto actual y se guardan en .vscode/settings.json.',
+      },
+      {
+        titulo: 'Interfaz gráfica o JSON',
+        texto:
+          'Puedes cambiar ajustes desde la interfaz o editando settings.json directamente. Los atajos de teclado y los perfiles tienen su propia configuración.',
+        codigo:
+          '{\n    "editor.fontSize": 14,\n    "editor.tabSize": 4,\n    "editor.wordWrap": "on"\n}',
+      },
+      {
+        titulo: 'Perfiles',
+        texto:
+          'Un perfil guarda un conjunto de extensiones y ajustes. Es útil para separar, por ejemplo, tu entorno web del de Python.',
+      },
+    ],
   },
   {
-    titulo: 'Configuración y extensiones con criterio',
-    texto:
-      'Los ajustes pueden ser de usuario (todos tus proyectos) o de workspace (solo uno). Las extensiones son software de terceros con muchos permisos: comprueba publicador, documentación y mantenimiento antes de instalarlas.',
+    id: 'extensiones',
+    titulo: 'Extensiones',
+    tono: 330,
+    pasos: [
+      {
+        titulo: '¿Qué son?',
+        texto:
+          'Complementos que añaden funciones a VS Code: lenguajes, IntelliSense, depuración, linters, formateadores...',
+      },
+      {
+        titulo: 'Instalar una',
+        texto:
+          'Abre Extensions, busca la extensión y revisa antes publicador, documentación y compatibilidad. Después pulsa Install.',
+        imagen: {
+          src: extensionesVista,
+          alt: 'Panel Extensiones de VS Code con el icono de acceso y la barra Buscar extensiones en Marketplace señalados en rojo.',
+          pie: 'Pulsa el icono Extensiones de la barra de actividad. En la barra «Buscar extensiones en Marketplace» puedes escribir el nombre de una extensión o una función que necesites para encontrarla. Pulsa la imagen para ampliarla.',
+        },
+      },
+      {
+        titulo: 'Cuidado: son software de terceros',
+        texto:
+          'Las extensiones se ejecutan con permisos importantes, como leer archivos o lanzar procesos. Instala solo las necesarias, de publicadores fiables y con mantenimiento.',
+      },
+      {
+        titulo: 'Recomendar extensiones en un proyecto',
+        texto:
+          'Un proyecto puede sugerir extensiones con un archivo .vscode/extensions.json.',
+        codigo: '{\n    "recommendations": [\n        "ms-python.python"\n    ]\n}',
+      },
+      {
+        titulo: 'Habilitar, deshabilitar, desinstalar',
+        texto:
+          'Si sospechas que una extensión da problemas o consume recursos, deshabilítala para comprobarlo antes de desinstalarla.',
+        imagen: {
+          src: deshabilitarExtension,
+          alt: 'Ficha de la extensión Auto Close Tag con el botón Deshabilitar señalado en rojo y Desinstalar a su derecha.',
+          pie: 'Pulsa Deshabilitar para dejar de usar la extensión sin eliminarla; puedes volver a habilitarla después. Para eliminarla, pulsa Desinstalar. Pulsa la imagen para ampliarla.',
+        },
+      },
+    ],
   },
   {
-    titulo: 'Emmet: abreviatura + Tab = HTML',
-    texto:
-      'Escribes una abreviatura como ul>li*3, pulsas Tab y VS Code genera el HTML completo. Se basa en un puñado de operadores: . # > + * {} [] () $',
-  },
-  {
-    titulo: 'Cómo leer una abreviatura de Emmet',
-    texto:
-      'De izquierda a derecha y por trozos pequeños. Cada operador dice cómo se relaciona un elemento con el siguiente: dentro (>), al lado (+), repetido (*)...',
+    id: 'emmet',
+    titulo: 'Emmet',
+    tono: 45,
+    pasos: [
+      {
+        titulo: 'Abreviatura + Tab',
+        texto:
+          'Emmet viene incluido en VS Code. Escribes una abreviatura, pulsas Tab y se convierte en HTML.',
+        codigo: 'ul>li*3',
+      },
+      {
+        titulo: 'Clases e id',
+        texto: 'El punto añade una clase y la almohadilla un id.',
+        codigo: 'div#principal.contenedor',
+      },
+      {
+        titulo: 'Hijo y hermano',
+        texto:
+          'Con > el siguiente elemento va dentro; con + va al mismo nivel.',
+        codigo: 'nav>ul>li\nheader+main+footer',
+      },
+      {
+        titulo: 'Repetir y numerar',
+        texto:
+          'El asterisco repite un elemento. El símbolo $ genera números automáticamente.',
+        codigo: 'ul>li.item$*5',
+      },
+      {
+        titulo: 'Texto y atributos',
+        texto: 'Las llaves ponen texto y los corchetes añaden atributos.',
+        codigo: 'a[href="#" target="_blank"]{Enlace}',
+      },
+      {
+        titulo: 'Agrupar y leer',
+        texto:
+          'Los paréntesis agrupan una estructura para repetirla. Para entender una abreviatura larga, léela de izquierda a derecha y por trozos.',
+        codigo: 'ul>(li>a)*3',
+      },
+      {
+        titulo: 'Plantilla HTML5',
+        texto:
+          'Escribir solo el signo de exclamación y pulsar Tab genera la estructura básica de una página HTML5.',
+        codigo: '!',
+      },
+    ],
   },
 ]
 
@@ -50,7 +293,7 @@ export const atajos = [
   { accion: 'Renombrar símbolo', atajo: 'F2' },
   { accion: 'Formatear documento', atajo: 'Shift+Alt+F' },
   { accion: 'Cursor adicional', atajo: 'Alt+clic' },
-  { accion: 'Terminal integrado', atajo: 'Ctrl+ñ (teclado español) · Ctrl+` por defecto' },
+  { accion: 'Terminal integrado', atajo: 'Ctrl+`', nota: ' En teclado español suele ser Ctrl+ñ' },
   { accion: 'Zen Mode', atajo: 'Ctrl+K Z' },
   { accion: 'Cerrar archivo', atajo: 'Ctrl+W' },
 ]
@@ -187,13 +430,18 @@ export const glosario = [
   { termino: 'Linter', definicion: 'Herramienta que analiza el código y avisa de errores o malas prácticas.' },
 ]
 
-// IMPORTANTE: comprobad que cada enlace funciona antes de publicar.
 export const fuentes = [
   { titulo: 'Apuntes de la unidad: pps1_02 vscode.md', url: null, respalda: 'Interfaz, edición, configuración, extensiones y seguridad.' },
   { titulo: 'Apuntes de la unidad: pps1_04 emmet.md', url: null, respalda: 'Operadores de Emmet y ejercicios.' },
   { titulo: 'Visual Studio Code Docs', url: 'https://code.visualstudio.com/docs', respalda: 'Contrastar atajos, configuración y funciones del editor.' },
-  { titulo: 'Emmet en VS Code', url: 'https://code.visualstudio.com/docs/editing/emmet', respalda: 'Uso de Emmet dentro de VS Code.' },
+  { titulo: 'Emmet en VS Code', url: 'https://code.visualstudio.com/docs/languages/emmet', respalda: 'Uso de Emmet dentro de VS Code.' },
   { titulo: 'Documentación oficial de Emmet', url: 'https://docs.emmet.io/', respalda: 'Sintaxis de abreviaturas.' },
   { titulo: 'Workspace Trust', url: 'https://code.visualstudio.com/docs/editing/workspaces/workspace-trust', respalda: 'Restricted Mode.' },
-  { titulo: 'Librería emmet (npm)', url: 'https://www.npmjs.com/package/emmet', respalda: 'Motor usado en el playground de esta web.' },
+]
+
+export const librerias = [
+  { nombre: 'React', url: 'https://react.dev/', uso: 'Construcción de la interfaz con componentes.', licencia: 'MIT' },
+  { nombre: 'Vite', url: 'https://vite.dev/', uso: 'Servidor de desarrollo y empaquetado de la web.', licencia: 'MIT' },
+  { nombre: 'emmet', url: 'https://www.npmjs.com/package/emmet', uso: 'Expandir abreviaturas en el playground y los ejercicios.', licencia: 'MIT' },
+  { nombre: 'lucide-react', url: 'https://lucide.dev/', uso: 'Iconos de las tarjetas.', licencia: 'ISC' },
 ]

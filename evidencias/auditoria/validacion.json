@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-26",
+  "nineFields": true,
+  "referencedFilesExist": 22,
+  "applicationAndSkillsUnchanged": true,
+  "newTextPrivacyPatternMatches": [],
+  "relativeLinks": [
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "plan.md",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "matriz.md",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "../../conversaciones-ia/06-auditoria-codex-2026-10-26.md",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "dependencias.txt",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "emmet-resultados.json",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "emmet-test.mjs",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "privacidad.json",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "enlaces.json",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/informe.md",
+      "target": "npm-audit.json",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/matriz.md",
+      "target": "plan.md",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/matriz.md",
+      "target": "informe.md",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/matriz.md",
+      "target": "browser-resultados.json",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/matriz.md",
+      "target": "emmet-resultados.json",
+      "exists": true
+    },
+    {
+      "from": "evidencias/auditoria/matriz.md",
+      "target": "enlaces.json",
+      "exists": true
+    }
+  ],
+  "screenshots": "Solo páginas locales con diálogos cerrados; no se copiaron capturas fuente con rutas personales. Revisión visual adicional del diagrama original no publicada.",
+  "limitations": "Regex no demuestra ausencia universal de secretos. Referencias históricas rotas se documentan sin corregir.",
+  "delivery": "Push fallido exit 128; main remoto sigue en commit auditado; cierre revisado y git diff --check correcto"
+}

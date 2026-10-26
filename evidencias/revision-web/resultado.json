@@ -1,0 +1,34 @@
+{
+  "browser": "155.0.4283.62",
+  "date": "2026-10-22",
+  "checks": [
+    {
+      "width": 320,
+      "noPageOverflow": true,
+      "namedInputsWithinViewport": true,
+      "skipLinkAndKeyboardFocus": true
+    },
+    {
+      "width": 375,
+      "noPageOverflow": true,
+      "namedInputsWithinViewport": true,
+      "skipLinkAndKeyboardFocus": true
+    },
+    {
+      "width": 1280,
+      "noPageOverflow": true,
+      "namedInputsWithinViewport": true,
+      "skipLinkAndKeyboardFocus": true
+    },
+    {
+      "reducedMotion": true,
+      "playgroundExpansion": true,
+      "exerciseCorrection": true,
+      "quizKeyboardFullCycle": true,
+      "stableStatusNode": true,
+      "quizRestart": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

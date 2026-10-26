@@ -1,0 +1,67 @@
+[
+  {
+    "id": "valid",
+    "inputLength": 7,
+    "status": 0,
+    "signal": null,
+    "result": "{\"length\":43,\"ms\":1.2264169999999979,\"sample\":\"<ul>\\n\\t<li></li>\\n\\t<li></li>\\n\\t<li></li>\\n</ul>\"}",
+    "resourceFailure": false
+  },
+  {
+    "id": "empty",
+    "inputLength": 0,
+    "status": 0,
+    "signal": null,
+    "result": "{\"length\":0,\"ms\":0.4558750000000007,\"sample\":\"\"}",
+    "resourceFailure": false
+  },
+  {
+    "id": "invalid",
+    "inputLength": 4,
+    "status": 0,
+    "signal": null,
+    "result": "{\"length\":11,\"ms\":1.150707999999998,\"sample\":\"<div></div>\"}",
+    "resourceFailure": false
+  },
+  {
+    "id": "active",
+    "inputLength": 29,
+    "status": 0,
+    "signal": null,
+    "result": "{\"length\":39,\"ms\":1.2953340000000004,\"sample\":\"<img src=\\\"x\\\" alt=\\\"\\\" onerror=\\\"alert(1)\\\">\"}",
+    "resourceFailure": false
+  },
+  {
+    "id": "long",
+    "inputLength": 50005,
+    "status": 0,
+    "signal": null,
+    "result": "{\"length\":50011,\"ms\":3.8951659999999997,\"sample\":\"<div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}",
+    "resourceFailure": false
+  },
+  {
+    "id": "repeat",
+    "inputLength": 8,
+    "status": 0,
+    "signal": null,
+    "result": "{\"length\":99999,\"ms\":32.928334,\"sample\":\"<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n<li></li>\\n\"}",
+    "resourceFailure": false
+  },
+  {
+    "id": "nested",
+    "inputLength": 1204,
+    "status": 0,
+    "signal": null,
+    "result": "{\"length\":93312,\"ms\":3.2562500000000014,\"sample\":\"<div>\\n\\t<div>\\n\\t\\t<div>\\n\\t\\t\\t<div>\\n\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t<div>\\n\\t\\t\\t\\t\\t\"}",
+    "resourceFailure": false
+  },
+  {
+    "id": "repeat-limit",
+    "inputLength": 10,
+    "status": null,
+    "signal": "SIGTERM",
+    "error": "ETIMEDOUT",
+    "result": "",
+    "resourceFailure": false
+  }
+]
