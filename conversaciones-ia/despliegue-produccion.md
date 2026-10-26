@@ -90,3 +90,62 @@
 > - Rediseño integral y profesional de [`README.md`](file:///home/alumno/ra1/pps-grupo-trabajo/README.md) con roles del equipo, enlace visible a producción, características interactivas, mapa del repositorio y guía de ejecución local.
 > - Clarificación de las tarjetas de sugerencia de GitHub Pages (Jekyll / Static HTML) y procedimiento para purgar flujos fallidos antiguos en la pestaña Actions.
 > - Actualización y consolidación completa de `PROCESO.md` y `conversaciones-ia/`.
+
+
+---
+
+## 6. Sesión de Correcciones de Auditoría y Verificación Estricta Final (26 de octubre de 2026)
+
+### Usuario:
+> "mi compañero me ha dicho lo siguiente , explicamelo: He hecho con Codex la auditoría de la Fase 4 y ya está todo subido al repositorio... [texto de Alberto M.]"
+
+### Asistente:
+> - Explicación pedagógica de la auditoría técnica realizada por Alberto M. con OpenAI Codex en la Fase 4 (Verificar).
+> - Desglose de los 7 hallazgos (autocorrección estricta, cuelgue en Emmet, ruta personal en imagen, contraste en modo claro, número de grupo, movimiento reducido y trazabilidad).
+> - Integración limpia de los 24 commits del equipo mediante `git pull` y resolución de conflictos.
+
+---
+
+### Usuario:
+> "revisa mi repositorio hazme un resumen de las cosas que han cambiado mis compañeros ademas , dime q es loq eu no se aline a lo que pide la actividad"
+
+### Asistente:
+> - Auditoría comparativa frente a la rúbrica de evaluación: análisis de las 6 guías interactivas, capturas subidas y evidencias de pruebas.
+> - Identificación precisa de las desviaciones: ruta privada en `Diagrama anotado de Visual Studio Code.png`, formato de nombres en el Footer, validación rígida de ejercicios, falta de tope en Playground y archivos residuales.
+
+---
+
+### Usuario:
+> "hazme los cambios y usa la skil para documentarlo"
+
+### Asistente:
+> - Ejecución de las correcciones técnicas en el código:
+>   1. Sanitización de la imagen PNG cubriendo la ruta privada en el terminal.
+>   2. Implementación de comparación de árboles DOM en `Ejercicios.jsx` para aceptar atributos en cualquier orden.
+>   3. Límite de 50 repeticiones en `Playground.jsx` y `Ejercicios.jsx` para estabilidad.
+>   4. Corrección de contraste en modo claro y desactivación de animación en `styles.css`.
+>   5. Unificación de nombres con iniciales y etiqueta `Grupo 2 (Bloque 3)` en `Footer.jsx`.
+>   6. Actualización de 6 guías en `README.md` y corrección de extensión en `web-vscode-emmet-claude.md`.
+> - Uso de la skill `auto-proceso` para generar la entrada estructurada en `PROCESO.md` bajo la Fase 4.
+
+---
+
+### Usuario:
+> "que falta por hacer?"
+> "subelo a github"
+
+### Asistente:
+> - Comprobación de la lista de verificación oficial (95% completado).
+> - Instrucciones para realizar el push desde el control de código fuente de VS Code (utilizando las credenciales seguras del usuario).
+
+---
+
+### Usuario:
+> "esta como publico , se super estricto y corrigemelo , ademas hay 2 readmi"
+> "HAs documentado todo lo que hehecho ?"
+
+### Asistente:
+> - Confirmación de la visibilidad pública del repositorio.
+> - Explicación de los 2 READMEs: `README.md` (portada general del proyecto) y `conversaciones-ia/README.md` (exigido por la Sección 3.3 del enunciado para justificar la conservación de chats de IA).
+> - Corrección estricta: eliminación de sección duplicada al final de `PROCESO.md` y retirada de archivos residuales vacíos (`evidencias/enlaces.md` y `skills/skill.sh/`).
+> - Actualización del índice de conversaciones y cierre de trazabilidad con autoría de Sandra F.
