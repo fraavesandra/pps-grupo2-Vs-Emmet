@@ -19,15 +19,21 @@ El enunciado solicita conversaciones originales completas. Los archivos que se d
 
 Para completar la evidencia de entrega, conservar desde la interfaz el historial original más completo disponible, incluidas las comprobaciones y el cierre, y revisar los datos personales antes de publicarlo. No sustituir mensajes originales por resúmenes atribuidos a la IA. Esta limitación de trazabilidad permanece abierta aunque las comprobaciones funcionales de la skill se superen.
 
-La conversación de creación `creacion-skill-auto-proceso.md`, citada en documentos anteriores, sigue ausente; debe recuperarse de su origen, no redactarse de nuevo.
+## Conversación de creación de auto-proceso y puesta en producción
+
+- [creacion-skill-auto-proceso.md](creacion-skill-auto-proceso.md): conserva los mensajes originales y el intercambio de diseño y primera prueba de la skill propia en Antigravity (Sandra F.).
+- [despliegue-produccion.md](despliegue-produccion.md): registra el proceso de diagnóstico, corrección de rutas de producción en GitHub Pages y resolución de incidencias.
+- [web-vscode-emmet-claude.md](web-vscode-emmet-claude.md): conversación de diseño y desarrollo de componentes web con Claude.
+
+Con estas incorporaciones se completa la trazabilidad de creación y despliegue del proyecto.
 
 
 ## Exportación recuperada el 23 de octubre de 2026
 
 Se ha localizado el registro local original del chat y se ha generado [04-conversacion-completa-codex-2026-10-23.md](04-conversacion-completa-codex-2026-10-23.md) automáticamente a partir de sus mensajes. Contiene 25 intervenciones de usuario/asistente hasta la solicitud de exportación, incluidas las confirmaciones de los formularios. Sustituye el extracto parcial como evidencia conversacional de esta prueba. El correo académico y el directorio personal se han sustituido por marcadores; se excluyen metadatos internos y llamadas/salidas de herramientas. El alcance exacto se explica en la cabecera. Las advertencias anteriores describen el estado previo a esta recuperación; no se borra su historial.
 
-Esta exportación corresponde a la prueba independiente, no a la conversación original de creación de la skill, que sigue ausente.
+Esta exportación corresponde a la prueba independiente; la conversación original de creación de la skill se conserva en `creacion-skill-auto-proceso.md`.
 
 ## Auditoría del 26 de octubre de 2026
 
-[06-auditoria-codex-2026-10-26.md](06-auditoria-codex-2026-10-26.md) exporta mecánicamente los mensajes originales disponibles del usuario y Codex, con exclusiones y marcadores de privacidad descritos en su cabecera. Actualizada con el cierre de la auditoría, la confirmación de subida y la petición de guardar esta conversación, incluida. El trabajo posterior de exportación queda fuera del corte. [Informe y límites](../evidencias/auditoria/informe.md). No sustituye ni reconstruye la conversación de creación ausente.
+[06-auditoria-codex-2026-10-26.md](06-auditoria-codex-2026-10-26.md) exporta mecánicamente los mensajes originales disponibles del usuario y Codex, con exclusiones y marcadores de privacidad descritos en su cabecera. Actualizada con el cierre de la auditoría, la confirmación de subida y la petición de guardar esta conversación, incluida. El trabajo posterior de exportación queda fuera del corte. [Informe y límites](../evidencias/auditoria/informe.md).
