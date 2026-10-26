@@ -249,3 +249,33 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `evidencias/auditoria/local-320.png`
 - `evidencias/auditoria/validacion.json`
 - `evidencias/auditoria/entrega.md`
+
+
+## Fase 4: Verificar — Conservación de la conversación y comprobación de la subida
+
+**Fecha:** 2026-10-26
+
+**Objetivo:** Completar el registro original de la conversación de auditoría y conservar la comprobación de su publicación.
+
+**Herramienta:** Codex, para exportar los mensajes del historial original JSONL y comprobar las referencias de Git.
+
+**Prompt:** “Registra y guarda esta conversación en su apartado en .md”. Previamente: “Ok, está. Comprueba”.
+
+**Resultado:** Se amplió la exportación Markdown con el cierre de auditoría, la confirmación del usuario y la verificación de la subida. El remoto main y el HEAD local coincidían en `4ff2f5f1288b3b661d273e37a42d6a75113d79f8`, que incluye el commit de auditoría `e9bc27d`.
+
+**Decisión:** Actualizar el archivo de conversación existente, mantener el fallo inicial de push como hecho histórico y añadir el resultado de la comprobación posterior.
+
+**Justificación:** Conservar el intercambio original y sus confirmaciones permite contrastar la auditoría sin presentar un resumen como transcripción ni dejar el estado de publicación sin aclarar.
+
+**Verificación:** Git inicialmente limpio; pull fast-forward indicó Already up to date. Exportación mecánica hasta la petición de guardado incluida, con exclusiones explícitas y marcadores de privacidad. Se comprobaron los nueve campos, archivos referenciados, ausencia de rutas personales y patrones de secretos en los textos nuevos y git diff --check. No se repitieron pruebas de aplicación ni se modificó la skill.
+
+**Participación:** Alberto M., confirmado para esta auditoría.
+
+**Conversación de origen:** [06-auditoria-codex-2026-10-26.md](conversaciones-ia/06-auditoria-codex-2026-10-26.md).
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `conversaciones-ia/06-auditoria-codex-2026-10-26.md`
+- `conversaciones-ia/README.md`
+- `evidencias/auditoria/exportar-conversacion.py`
+- `evidencias/auditoria/entrega.md`

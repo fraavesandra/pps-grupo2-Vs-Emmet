@@ -30,4 +30,4 @@ Esta exportación corresponde a la prueba independiente, no a la conversación o
 
 ## Auditoría del 26 de octubre de 2026
 
-[06-auditoria-codex-2026-10-26.md](06-auditoria-codex-2026-10-26.md) exporta mecánicamente los mensajes originales disponibles del usuario y Codex, con exclusiones y marcadores de privacidad descritos en su cabecera. El corte es anterior al commit/push y respuesta final; para conservar el cierre debe repetirse la exportación del historial original al terminar. [Informe y límites](../evidencias/auditoria/informe.md). No sustituye ni reconstruye la conversación de creación ausente.
+[06-auditoria-codex-2026-10-26.md](06-auditoria-codex-2026-10-26.md) exporta mecánicamente los mensajes originales disponibles del usuario y Codex, con exclusiones y marcadores de privacidad descritos en su cabecera. Actualizada con el cierre de la auditoría, la confirmación de subida y la petición de guardar esta conversación, incluida. El trabajo posterior de exportación queda fuera del corte. [Informe y límites](../evidencias/auditoria/informe.md). No sustituye ni reconstruye la conversación de creación ausente.

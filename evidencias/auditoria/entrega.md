@@ -11,3 +11,7 @@ Aplicación, dependencias, configuración y skills permanecen intactas. Las inci
 Verificación remota posterior: `git ls-remote origin refs/heads/main` devolvió `33ad6893ec9c1e7558a3cb1abde14d744c40428d`, la versión anterior auditada. Confirma que el commit de auditoría no llegó a main.
 
 Privacidad de metadatos: el correo configurado para el autor del commit local no es una dirección GitHub noreply. Su carácter público/privado no está confirmado. Antes de publicar, revisar autor/committer y usar la dirección noreply de la cuenta si es privado; no se reproduce el valor. No se cambió la identidad Git del usuario.
+
+## Actualización tras la confirmación del usuario
+
+El usuario comunicó que la subida estaba realizada. La consulta directa `git ls-remote origin refs/heads/main` devolvió `4ff2f5f1288b3b661d273e37a42d6a75113d79f8`, idéntico al HEAD local e incluyendo `e9bc27d`. La auditoría quedó publicada; el fallo anterior se conserva como historial. La conversación original se amplió hasta la petición de guardar el intercambio, incluyendo esta verificación.

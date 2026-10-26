@@ -19,12 +19,13 @@ for line in source.read_text().splitlines():
  text=re.sub(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}','[correo omitido por privacidad]',text)
  text=re.sub(r'(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16})','[credencial omitida]',text)
  messages.append((p['role'],x.get('timestamp',''),text))
+ if p['role']=='user' and text=='Registra y guarda esta conversación en su apartado en .md':break
 assert any('Usa obligatoriamente nuestra skill' in m[2] for m in messages)
 header='''# Conversación original de auditoría — 2026-10-26
 
 Exportación mecánica del historial local original JSONL de esta sesión. No es una reconstrucción ni un resumen. Incluye mensajes de usuario y asistente disponibles hasta el corte indicado, incluidas confirmaciones conversacionales si existen. Se omiten mensajes internos de sistema/desarrollador, razonamiento, bloques automáticos de entorno/página y llamadas/salidas de herramientas. Las aprobaciones técnicas del sandbox no se convierten en supuestos mensajes de usuario: están fuera de esta exportación conversacional. No se exportan imágenes adjuntas ni pantallas de aplicaciones ajenas.
 
-Las rutas personales, correos y patrones de credenciales se sustituyen por marcadores explícitos. No se modifican los originales. El corte precede al commit/push y a la respuesta final para evitar una exportación recursiva; esos mensajes posteriores no están incluidos. Para conservar también el cierre, exportar de nuevo el historial original después de terminar la sesión, revisar privacidad y añadirlo al repositorio.
+Las rutas personales, correos y patrones de credenciales se sustituyen por marcadores explícitos. No se modifican los originales. Esta actualización incluye el cierre de la auditoría, la petición de comprobar la subida y la confirmación de que el remoto coincide. El corte es la petición del usuario «Registra y guarda esta conversación en su apartado en .md», incluida. Se excluye únicamente el trabajo posterior de esta nueva exportación para evitar un registro recursivo.
 
 '''
 header+=f'Intervenciones exportadas: {len(messages)}. Última marca temporal del registro (UTC): {messages[-1][1]}.\n\n'

@@ -2,9 +2,9 @@
 
 Exportación mecánica del historial local original JSONL de esta sesión. No es una reconstrucción ni un resumen. Incluye mensajes de usuario y asistente disponibles hasta el corte indicado, incluidas confirmaciones conversacionales si existen. Se omiten mensajes internos de sistema/desarrollador, razonamiento, bloques automáticos de entorno/página y llamadas/salidas de herramientas. Las aprobaciones técnicas del sandbox no se convierten en supuestos mensajes de usuario: están fuera de esta exportación conversacional. No se exportan imágenes adjuntas ni pantallas de aplicaciones ajenas.
 
-Las rutas personales, correos y patrones de credenciales se sustituyen por marcadores explícitos. No se modifican los originales. El corte precede al commit/push y a la respuesta final para evitar una exportación recursiva; esos mensajes posteriores no están incluidos. Para conservar también el cierre, exportar de nuevo el historial original después de terminar la sesión, revisar privacidad y añadirlo al repositorio.
+Las rutas personales, correos y patrones de credenciales se sustituyen por marcadores explícitos. No se modifican los originales. Esta actualización incluye el cierre de la auditoría, la petición de comprobar la subida y la confirmación de que el remoto coincide. El corte es la petición del usuario «Registra y guarda esta conversación en su apartado en .md», incluida. Se excluye únicamente el trabajo posterior de esta nueva exportación para evitar un registro recursivo.
 
-Intervenciones exportadas: 7. Última marca temporal del registro (UTC): 2026-10-26T11:06:13.293Z.
+Intervenciones exportadas: 13. Última marca temporal del registro (UTC): 2026-10-26T11:22:09.784Z.
 
 ## 1. Usuario
 
@@ -101,3 +101,43 @@ Las seis guías completan sus 30 pasos y las imágenes cargan. El quiz devuelve 
 ## 7. Asistente
 
 El informe ya separa los fallos reproducidos de las mejoras y las comprobaciones pendientes. El enlace de Emmet devuelve 404; Safari pasa una comprobación básica de apertura, avance, retroceso y cierre. Estoy preparando la exportación original y validando privacidad y referencias antes de crear el commit autorizado.
+
+## 8. Asistente
+
+El commit local `e9bc27d` contiene los 22 archivos revisados, pero el push ha fallado: Git no dispone de credenciales HTTPS en esta terminal. Registraré ese resultado y comprobaré la referencia remota para distinguir claramente lo guardado en local de lo publicado.
+
+## 9. Asistente
+
+Auditoría guardada siguiendo `auto-proceso`, sin modificar aplicación ni skill.
+
+- **Funciona:** seis guías completas, imágenes, soluciones canónicas de siete ejercicios y quiz con puntuación y reinicio.
+- **Falla:** alternativas válidas en ejercicios 2 y 4, contraste, movimiento reducido, enlace de Emmet y coherencia documental. Se detectaron rutas personales existentes y una expansión que superó el límite local de tiempo.
+- **Pendiente:** lector de pantalla real, zoom verificado, móviles físicos, apuntes originales y ajustes administrativos de GitHub.
+- **Prioridad:** sanear la captura identificativa, limitar expansiones y corregir autocorrección y contraste.
+
+[Informe y recomendaciones](evidencias/auditoria/informe.md) · [Matriz](evidencias/auditoria/matriz.md) · [Conversación original exportada](conversaciones-ia/06-auditoria-codex-2026-10-26.md)
+
+**Guardado localmente, no publicado:** commits `e9bc27d` y `4ff2f5f`. El push falló por falta de credenciales HTTPS; comprobé que el remoto sigue en `33ad689`. Antes de subir, también conviene revisar el correo de autor del commit, que no es noreply.
+
+## 10. Usuario
+
+Ok, está. Comprueba
+
+## 11. Asistente
+
+Comprobaré si los dos commits de la auditoría ya están en el remoto y si coinciden con los archivos locales.
+
+## 12. Asistente
+
+Comprobado: **la auditoría ya está subida**.
+
+- `origin/main` y el repositorio local coinciden en `4ff2f5f`.
+- Incluye ambos commits y los 22 archivos de documentación, pruebas y evidencias.
+- No hay cambios locales pendientes.
+- Aplicación y skill siguen intactas.
+
+La nota de push fallido queda como registro histórico del intento anterior.
+
+## 13. Usuario
+
+Registra y guarda esta conversación en su apartado en .md
