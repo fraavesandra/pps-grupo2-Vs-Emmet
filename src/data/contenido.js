@@ -434,10 +434,9 @@ export const fuentes = [
   { titulo: 'Apuntes de la unidad: pps1_02 vscode.md', url: null, respalda: 'Interfaz, edición, configuración, extensiones y seguridad.' },
   { titulo: 'Apuntes de la unidad: pps1_04 emmet.md', url: null, respalda: 'Operadores de Emmet y ejercicios.' },
   { titulo: 'Visual Studio Code Docs', url: 'https://code.visualstudio.com/docs', respalda: 'Contrastar atajos, configuración y funciones del editor.' },
-  { titulo: 'Emmet en VS Code', url: 'https://code.visualstudio.com/docs/editing/emmet', respalda: 'Uso de Emmet dentro de VS Code.' },
+  { titulo: 'Emmet en VS Code', url: 'https://code.visualstudio.com/docs/languages/emmet', respalda: 'Uso de Emmet dentro de VS Code.' },
   { titulo: 'Documentación oficial de Emmet', url: 'https://docs.emmet.io/', respalda: 'Sintaxis de abreviaturas.' },
   { titulo: 'Workspace Trust', url: 'https://code.visualstudio.com/docs/editing/workspaces/workspace-trust', respalda: 'Restricted Mode.' },
-  { titulo: 'Librería emmet (npm)', url: 'https://www.npmjs.com/package/emmet', respalda: 'Motor usado en el playground de esta web.' },
 ]
 
 export const librerias = [
