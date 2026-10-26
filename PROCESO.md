@@ -38,7 +38,7 @@ También se obtuvo la propuesta de combinar explicaciones teóricas breves con c
 
 **Archivos afectados:**
 - `Fase1.md` (documento de trabajo original)
-- `PROCESO.MD`
+- `PROCESO.md`
 
 ### Secciones prioritarias seleccionadas
 
@@ -87,7 +87,7 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `skills/auto-proceso/GUIA-USO.md`
 - `.agents/skills/auto-proceso/SKILL.md`
 - `.github/copilot-instructions.md`
-- `PROCESO.MD`
+- `PROCESO.md`
 
 
 

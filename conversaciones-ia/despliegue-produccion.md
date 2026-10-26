@@ -1,48 +1,92 @@
-# Registro de Conversación con IA — Despliegue en Producción y Puesta en Marcha
+# Registro de Conversación con IA — Integración, Despliegue en Producción y Publicación
 
-* **Fecha:** 2026-10-22
-* **Herramienta:** Antigravity (Gemini / Claude) en VS Code
-* **Participante:** Sandra F.
-* **Objetivo:** Poner en producción la web didáctica en GitHub Pages, solucionar el error 404 y verificar la correcta configuración del build con Vite.
+* **Fecha:** 22 de octubre de 2026
+* **Herramienta:** Antigravity (Gemini / Claude Opus) en VS Code
+* **Participantes:** Sandra F., Raquel G., Pablo C., Alberto M.
+* **Objetivo:** Integrar las aportaciones del equipo (Fase 1 y aplicación web), poner en producción la web didáctica en GitHub Pages, solucionar el error HTTP 404 y verificar la correcta publicación tras el cambio de nombre del repositorio.
 
 ---
 
-## Intercambio principal
+## 1. Integración de la Fase 1 (Aportación de Raquel G.)
+
+### Usuario:
+> Transcribe el contenido elaborado por Raquel G. sobre la Fase 1 (Comprender y delimitar): objetivos, selección de 7 ideas clave, atajos de teclado, secciones prioritarias y temas fuera del alcance.
+
+### Asistente:
+> - Integración del bloque estructurado de la **Fase 1** en `PROCESO.md` respetando el formato de los 9 campos obligatorios de la rúbrica.
+> - Creación del archivo de evidencia original [`conversaciones-ia/conversacion_vscode_emmet.md`](file:///home/alumno/ra1/pps-grupo-trabajo/conversaciones-ia/conversacion_vscode_emmet.md) con la transcripción de la consulta inicial de Raquel.
+
+---
+
+## 2. Diagnóstico y Preparación para Producción
 
 ### Usuario:
 > "vale , estoy un poco perdida , con lo que tengo ahora . quiero que la pagina funcione y este todo en produccion"
 
 ### Asistente:
-> Diagnóstico completo del estado del proyecto:
-> 1. Verificación del repositorio y el código subido por el equipo (React + Vite).
-> 2. Detección del error en `vite.config.js` (`base: '/pps-grupo2-Vs-Emmet/'` en lugar de `base: '/pps-grupo-trabajo/'`), causante de pantallas en blanco y errores 404 al resolver los assets.
-> 3. Corrección del nombre del archivo `Index.html` a `index.html` (minúsculas) para evitar problemas en entornos Linux/Ubuntu de GitHub Actions.
-> 4. Generación de los archivos de entrega requeridos por la rúbrica (`README.md`, `evidencias/fuentes.md`, `evidencias/prueba-skill-propia.md`).
+> Auditoría completa del repositorio local y remoto:
+> 1. Detección de la aplicación web didáctica interactiva desarrollada en React 19 + Vite por Pablo C. (con Playground en vivo, Quiz, Atajos, Descomponedor y Glosario).
+> 2. Identificación de **dos problemas críticos para el despliegue**:
+>    - En `vite.config.js`, la propiedad `base` apuntaba a una ruta no sincronizada con el repositorio.
+>    - El archivo de entrada principal estaba nombrado como `Index.html` (con mayúscula), lo que genera fallos de resolución en entornos Linux/Ubuntu de GitHub Actions.
+> 3. Renombrado de archivos a minúsculas (`Index.html` → `index.html` y `PROCESO.MD` → `PROCESO.md`).
+> 4. Generación de los documentos de evidencias requeridos:
+>    - [`evidencias/fuentes.md`](file:///home/alumno/ra1/pps-grupo-trabajo/evidencias/fuentes.md): Documentos de clase y enlaces oficiales de respaldo.
+>    - [`evidencias/prueba-skill-propia.md`](file:///home/alumno/ra1/pps-grupo-trabajo/evidencias/prueba-skill-propia.md): Caso de prueba y evaluación de calidad de `auto-proceso`.
 
 ---
+
+## 3. Resolución del Error 404 y Cambio de Nombre del Repositorio
 
 ### Usuario:
 > "dice que error 404"
 
 ### Asistente:
-> Explicación de la causa del 404:
-> - Los cambios locales debían subirse mediante sincronización en VS Code o terminal (`git push origin main`).
-> - Se debe activar la opción de origen de GitHub Pages en el panel de control de GitHub (Settings → Pages → Source: GitHub Actions).
+> Explicación de los requisitos de activación en GitHub Pages:
+> - Los commits deben sincronizarse con GitHub (`git push`).
+> - Se debe cambiar la fuente en GitHub Settings → Pages → Source: **GitHub Actions**.
+
+### Usuario:
+> Envío de captura de pantalla confirmando: "GitHub Pages source saved" con Source: "GitHub Actions".
+
+### Usuario:
+> "sigue sin aparecer la pagina"
+> "es que el nombre del repositorio se llama pps-grupo2-Vs-Emmet por q le he cambiado al nombre"
+
+### Asistente:
+> Diagnóstico definitivo del problema:
+> - Al haberse renombrado el repositorio en GitHub a `pps-grupo2-Vs-Emmet`, la URL pública canónica en GitHub Pages pasa a ser:
+>   `https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/`
+> - Acciones correctivas aplicadas de inmediato:
+>   1. Ajuste de `vite.config.js` con `base: command === 'build' ? '/pps-grupo2-Vs-Emmet/' : '/'`.
+>   2. Actualización de enlaces en `README.md` y `PROCESO.md`.
+>   3. Actualización de la URL del remoto git:
+>      `git remote set-url origin https://github.com/fraavesandra/pps-grupo2-Vs-Emmet.git`.
 
 ---
 
+## 4. Verificación del Despliegue en Vivo
+
 ### Usuario:
-> [Captura de pantalla de la interfaz de GitHub Pages confirmando "GitHub Pages source saved" y Source: "GitHub Actions"]
+> "ya lo veo"
 
 ### Asistente:
-> Confirmación de que el workflow de GitHub Actions está en cola/ejecución y que en 1-2 minutos estará disponible en `https://fraavesandra.github.io/pps-grupo-trabajo/`.
-> Recordatorio sobre la visibilidad del repositorio (cambiar a público en Settings -> General antes de la entrega final).
+> Confirmación de que el pipeline de GitHub Actions (`Deploy a GitHub Pages`) finalizó con éxito en verde (✅) y la web didáctica interactiva se encuentra 100% operativa en producción:
+> 👉 **https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/**
+> 
+> Creación del documento de análisis crítico de la skill pública:
+> - [`evidencias/skill-publica.md`](file:///home/alumno/ra1/pps-grupo-trabajo/evidencias/skill-publica.md) sobre `web-design-guidelines` de Vercel Labs, según lo acordado en `conversaciones-ia/01-planificacion-skill-publica.md`.
 
 ---
 
+## 5. Actualización del README y Limpieza de Configuración
+
 ### Usuario:
-> "¿lo estas documentando?"
+> "https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/ actualizame el realme"
+> "ayudame a quitar las cosas para q se vea en el apartado de pages solo el q funciona"
+> "documenta todo lo que hemos hablado"
 
 ### Asistente:
-> Registro formal de la Fase 5 (Publicar y revisar) en `PROCESO.md` siguiendo la plantilla de la rúbrica.
-
+> - Rediseño integral y profesional de [`README.md`](file:///home/alumno/ra1/pps-grupo-trabajo/README.md) con roles del equipo, enlace visible a producción, características interactivas, mapa del repositorio y guía de ejecución local.
+> - Clarificación de las tarjetas de sugerencia de GitHub Pages (Jekyll / Static HTML) y procedimiento para purgar flujos fallidos antiguos en la pestaña Actions.
+> - Actualización y consolidación completa de `PROCESO.md` y `conversaciones-ia/`.
