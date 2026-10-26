@@ -77,5 +77,6 @@
     }
   ],
   "screenshots": "Solo páginas locales con diálogos cerrados; no se copiaron capturas fuente con rutas personales. Revisión visual adicional del diagrama original no publicada.",
-  "limitations": "Regex no demuestra ausencia universal de secretos. Referencias históricas rotas se documentan sin corregir."
+  "limitations": "Regex no demuestra ausencia universal de secretos. Referencias históricas rotas se documentan sin corregir.",
+  "delivery": "Push fallido exit 128; main remoto sigue en commit auditado; cierre revisado y git diff --check correcto"
 }

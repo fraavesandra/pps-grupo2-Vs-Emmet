@@ -50,6 +50,6 @@ Criterios definidos previamente en [plan.md](plan.md). Resultados detallados en 
 | T13 grupo/guías/referencias | Repositorio y Pages | fallido | AUD-06/07 |
 | T14 exportación original | Registro local | superado | Exportación hasta corte explícito; no reconstruida |
 | T14 campos/referencias/privacidad nuevas | Local | superado | Validación previa al commit documentada en validacion.json |
-| T14 publicación | Git | no probado | Consultar cierre de entrega y respuesta final para resultado del push |
+| T14 publicación | Git | bloqueado | Push exit 128 por falta de credenciales HTTPS; entrega.md. Commit e9bc27d guardado localmente |
 
 Los estados agregados no cuentan como porcentaje de cobertura. “Superado” se limita al caso descrito, nunca a toda la seguridad/accesibilidad del sitio.
