@@ -14,7 +14,7 @@
 
 ### Asistente:
 > - Integración del bloque estructurado de la **Fase 1** en `PROCESO.md` respetando el formato de los 9 campos obligatorios de la rúbrica.
-> - Creación del archivo de evidencia original [`conversaciones-ia/conversacion_vscode_emmet.md`](file:///home/alumno/ra1/pps-grupo-trabajo/conversaciones-ia/conversacion_vscode_emmet.md) con la transcripción de la consulta inicial de Raquel.
+> - Creación del archivo de evidencia original [`conversaciones-ia/conversacion_vscode_emmet.md`](conversacion_vscode_emmet.md) con la transcripción de la consulta inicial de Raquel.
 
 ---
 
@@ -31,8 +31,8 @@
 >    - El archivo de entrada principal estaba nombrado como `Index.html` (con mayúscula), lo que genera fallos de resolución en entornos Linux/Ubuntu de GitHub Actions.
 > 3. Renombrado de archivos a minúsculas (`Index.html` → `index.html` y `PROCESO.MD` → `PROCESO.md`).
 > 4. Generación de los documentos de evidencias requeridos:
->    - [`evidencias/fuentes.md`](file:///home/alumno/ra1/pps-grupo-trabajo/evidencias/fuentes.md): Documentos de clase y enlaces oficiales de respaldo.
->    - [`evidencias/prueba-skill-propia.md`](file:///home/alumno/ra1/pps-grupo-trabajo/evidencias/prueba-skill-propia.md): Caso de prueba y evaluación de calidad de `auto-proceso`.
+>    - [`evidencias/fuentes.md`](../evidencias/fuentes.md): Documentos de clase y enlaces oficiales de respaldo.
+>    - [`evidencias/prueba-skill-propia.md`](../evidencias/prueba-skill-propia.md): Caso de prueba y evaluación de calidad de `auto-proceso`.
 
 ---
 
@@ -75,7 +75,7 @@
 > 👉 **https://fraavesandra.github.io/pps-grupo2-Vs-Emmet/**
 > 
 > Creación del documento de análisis crítico de la skill pública:
-> - [`evidencias/skill-publica.md`](file:///home/alumno/ra1/pps-grupo-trabajo/evidencias/skill-publica.md) sobre `web-design-guidelines` de Vercel Labs, según lo acordado en `conversaciones-ia/01-planificacion-skill-publica.md`.
+> - [`evidencias/skill-publica.md`](../evidencias/skill-publica.md) sobre `web-design-guidelines` de Vercel Labs, según lo acordado en `conversaciones-ia/01-planificacion-skill-publica.md`.
 
 ---
 
@@ -87,7 +87,7 @@
 > "documenta todo lo que hemos hablado"
 
 ### Asistente:
-> - Rediseño integral y profesional de [`README.md`](file:///home/alumno/ra1/pps-grupo-trabajo/README.md) con roles del equipo, enlace visible a producción, características interactivas, mapa del repositorio y guía de ejecución local.
+> - Rediseño integral y profesional de [`README.md`](../README.md) con roles del equipo, enlace visible a producción, características interactivas, mapa del repositorio y guía de ejecución local.
 > - Clarificación de las tarjetas de sugerencia de GitHub Pages (Jekyll / Static HTML) y procedimiento para purgar flujos fallidos antiguos en la pestaña Actions.
 > - Actualización y consolidación completa de `PROCESO.md` y `conversaciones-ia/`.
 

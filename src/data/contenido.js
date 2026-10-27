@@ -238,8 +238,12 @@ export const guias = [
       {
         titulo: 'Abreviatura + Tab',
         texto:
-          'Emmet viene incluido en VS Code. Escribes una abreviatura, pulsas Tab y se convierte en HTML.',
-        codigo: 'ul>li*3',
+          'Emmet viene incluido en VS Code. Abre un archivo HTML y activa emmet.triggerExpansionOnTab en los ajustes para expandir con Tab. También puedes usar el comando Emmet: Expand Abbreviation desde la paleta.',
+        instrucciones: [
+          'Abre la paleta y ejecuta Preferences: Open User Settings (JSON). Añade la propiedad mostrada a tu objeto de ajustes, respetando las comas.',
+          'Comprueba que el modo de lenguaje sea HTML y Emmet esté habilitado. Escribe ul>li*3 y pulsa Tab.',
+        ],
+        codigo: '{\n  "emmet.triggerExpansionOnTab": true\n}',
       },
       {
         titulo: 'Clases e id',
@@ -272,7 +276,7 @@ export const guias = [
       {
         titulo: 'Plantilla HTML5',
         texto:
-          'Escribir solo el signo de exclamación y pulsar Tab genera la estructura básica de una página HTML5.',
+          'Con la configuración del primer paso activada, escribir el signo de exclamación y pulsar Tab genera la estructura básica de una página HTML5.',
         codigo: '!',
       },
     ],
@@ -425,7 +429,7 @@ export const glosario = [
   { termino: 'Extensión', definicion: 'Complemento de terceros que añade funciones a VS Code, como soporte de lenguajes o depuradores.' },
   { termino: 'settings.json', definicion: 'Archivo donde se guardan los ajustes; puede ser de usuario o de workspace (.vscode/settings.json).' },
   { termino: 'Restricted Mode', definicion: 'Modo que limita funciones peligrosas al abrir una carpeta no confiable.' },
-  { termino: 'Emmet', definicion: 'Sistema de abreviaturas que se expanden a HTML y CSS al pulsar Tab.' },
+  { termino: 'Emmet', definicion: 'Sistema de abreviaturas que se expanden a HTML y CSS; para usar Tab, activa emmet.triggerExpansionOnTab en VS Code.' },
   { termino: 'Abreviatura', definicion: 'Texto corto escrito con operadores de Emmet (por ejemplo ul>li*3) que se expande a código.' },
   { termino: 'Linter', definicion: 'Herramienta que analiza el código y avisa de errores o malas prácticas.' },
 ]

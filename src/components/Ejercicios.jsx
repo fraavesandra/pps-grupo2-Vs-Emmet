@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import expand from 'emmet'
+import { expandirSeguro, mensajeEmmet } from '../utils/emmetSeguro.js'
 import { ejercicios } from '../data/contenido.js'
 
 // Compara dos nodos HTML estructuralmente, ignorando el orden de atributos (AUD-02)
@@ -51,27 +52,17 @@ function Ejercicio({ ejercicio, numero }) {
   const [respuesta, setRespuesta] = useState('')
   const [estado, setEstado] = useState(null) // null | 'ok' | 'mal' | 'error'
 
+  const [error, setError] = useState('')
   const objetivo = expand(ejercicio.solucion)
 
   function comprobar() {
-    const trimmed = respuesta.trim()
-    if (!trimmed) {
-      setEstado('mal')
-      return
-    }
-
-    // AUD-01: Límite de seguridad
-    const repeticiones = trimmed.match(/\*(\d+)/g)
-    if (repeticiones?.some((r) => parseInt(r.slice(1), 10) > 50)) {
-      setEstado('error')
-      return
-    }
-
     try {
-      const mioHtml = expand(trimmed)
+      const mioHtml = expandirSeguro(respuesta)
       const esIgual = sonHtmlEquivalentes(mioHtml, objetivo)
       setEstado(esIgual ? 'ok' : 'mal')
-    } catch {
+      setError('')
+    } catch (e) {
+      setError(mensajeEmmet(e))
       setEstado('error')
     }
   }
@@ -102,7 +93,7 @@ function Ejercicio({ ejercicio, numero }) {
       <p role="status" className={`resultado ${estado ?? ''}`}>
         {estado === 'ok' && '✅ Correcto: genera el mismo HTML.'}
         {estado === 'mal' && '❌ Todavía no: el HTML generado es distinto.'}
-        {estado === 'error' && '⚠️ La abreviatura no es válida.'}
+        {estado === 'error' && `⚠️ ${error}`}
       </p>
 
       <details>

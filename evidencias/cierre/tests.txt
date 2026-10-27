@@ -1,0 +1,16 @@
+✔ rechaza multiplicadores anidados y grupos antes de materializarlos (1.304292ms)
+✔ suma hermanos: admite 200 y rechaza 201 nodos (3.864833ms)
+✔ 500 caracteres originales, incluidos espacios; 501 rechazados (0.51775ms)
+✔ valida vacío, inválido, repetición individual y profundidad (0.2475ms)
+✔ texto literal con asterisco no se confunde con multiplicación (0.180875ms)
+✔ lorem grande, rangos y numeración se acotan antes de generar texto (0.558292ms)
+✔ ejemplos normales, agrupación y snippet HTML5 conservados (0.872541ms)
+✔ salida textual demasiado grande no se devuelve al DOM (0.440708ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 48.490542
