@@ -40,9 +40,11 @@ Alternativas comprobadas: ejercicio 2 `div[class=contenedor id=principal]`; ejer
 
 ## Límites del cierre
 
-No es una repetición de toda la auditoría. No se ha probado lector de pantalla real, Firefox/Safari en este cierre, móviles físicos, zoom, contraste completo ni instalación limpia con Node 22. No se ha ejecutado VS Code para probar Tab: se verificó la documentación oficial y su presentación en la guía. No se certifica accesibilidad ni seguridad global. No se han purgado imágenes antiguas del historial ni revisado conversaciones anteriores. No se han modificado quiz, estilos, workflow ni otros contenidos ajenos a los cuatro pendientes.
+No es una repetición de toda la auditoría. No se ha probado lector de pantalla real, Firefox/Safari en este cierre, móviles físicos, zoom, contraste completo ni instalación limpia local con Node 22 (sí se completó en CI, como se indica abajo). No se ha ejecutado VS Code para probar Tab: se verificó la documentación oficial y su presentación en la guía. No se certifica accesibilidad ni seguridad global. No se han purgado imágenes antiguas del historial ni revisado conversaciones anteriores. No se han modificado quiz, estilos, workflow ni otros contenidos ajenos a los cuatro pendientes.
 
-La publicación de este cierre se realiza después de estas comprobaciones. El resultado del push y la verificación del remoto se comunicarán al terminar; este informe previo no afirma un despliegue todavía no comprobado.
+## Publicación comprobada
+
+El commit `7922cc5b6869fc398a9779447d625e5820f4f841` se subió a `main` y coincidió con la referencia remota consultada. El [workflow de Pages](https://github.com/fraavesandra/pps-grupo2-Vs-Emmet/actions/runs/40488166330) completó correctamente los trabajos build y deploy, incluida instalación npm ci y compilación con Node 22. Después se abrió la web pública en Chrome: la guía Interfaz cargó la imagen nueva de 1536 × 1024 y se comprobó visualmente que la ruta no aparece. La página también mostraba la explicación actualizada de Tab. Esta comprobación pública fue de lectura; las entradas adversarias se probaron únicamente en local. Esta anotación documental es posterior al despliegue de la aplicación citado.
 
 ## Reproducción local
 
