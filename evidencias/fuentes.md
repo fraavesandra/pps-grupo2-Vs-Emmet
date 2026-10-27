@@ -23,7 +23,7 @@ Este documento recopila las fuentes originales y secundarias utilizadas para la 
   * **Qué información respalda:** Verificación de atajos de teclado estándar por sistema operativo, personalización mediante `settings.json`, gestión del ciclo de vida de extensiones y funciones avanzadas del editor.
 
 * **Guía de Emmet en Visual Studio Code**
-  * **Enlace:** [https://code.visualstudio.com/docs/editing/emmet](https://code.visualstudio.com/docs/editing/emmet)
+  * **Enlace:** [https://code.visualstudio.com/docs/languages/emmet](https://code.visualstudio.com/docs/languages/emmet)
   * **Qué información respalda:** Integración nativa de Emmet en VS Code, configuración de expansión con tecla Tab (`emmet.triggerExpansionOnTab`), perfiles de sintaxis y soporte multilínea.
 
 * **Documentación oficial del proyecto Emmet**

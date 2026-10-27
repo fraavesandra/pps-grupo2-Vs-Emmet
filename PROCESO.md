@@ -287,25 +287,25 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 
 **Fecha:** 2026-10-26
 
-**Objetivo:** Resolver los hallazgos confirmados en la auditoría técnica previa (AUD-01 a AUD-06) para alinear plenamente la aplicación web y el repositorio con los criterios de evaluación de la rúbrica (privacidad, accesibilidad WCAG, robustez didáctica y coherencia documental).
+**Objetivo:** Resolver los hallazgos confirmados en la auditoría técnica previa (AUD-01 a AUD-06) para mejorar privacidad, accesibilidad, robustez didáctica y coherencia documental; sin afirmar cumplimiento completo de la rúbrica ni certificación WCAG.
 
 **Herramienta:** Antigravity (Google / Claude) en VS Code. Se empleó para analizar el informe de auditoría (`evidencias/auditoria/informe.md`), sanitizar recursos gráficos, corregir la lógica de validación HTML en React, implementar límites de contención en Emmet y ajustar estilos CSS de contraste y accesibilidad motora.
 
 **Prompt:** "hazme los cambios y usa la skil para documentarlo"
 
-**Resultado:** Se subsanaron satisfactoriamente las siguientes incidencias:
-1. **AUD-05 (Privacidad):** Se sanitizó la captura `src/assets/instalacion/Diagrama anotado de Visual Studio Code.png`, ocultando con el color de fondo del editor el área de la consola terminal que revelaba una ruta de perfil personal local.
+**Resultado:** Se aplicaron las siguientes modificaciones iniciales; la revisión posterior del 27 de octubre detectó limitaciones en la ocultación de la captura y los límites de expansión, corregidas en la entrada de cierre:
+1. **AUD-05 (Privacidad):** Se añadió una franja a `src/assets/instalacion/Diagrama anotado de Visual Studio Code.png` con intención de ocultar la ruta. La apertura visual posterior mostró que la franja no cubría la línea identificativa; no quedó resuelto en esta intervención inicial.
 2. **AUD-06 (Coherencia de grupo y formato):** En `src/components/Footer.jsx` se corrigieron los nombres para incluir nombre de pila e inicial del primer apellido para todos los integrantes (`Alberto M., Sandra F., Raquel G., Pablo C.`) y se unificó la nomenclatura oficial a `Grupo 2 (Bloque 3)`. En `README.md` se actualizó la referencia a las 6 guías e ideas clave interactivas.
 3. **AUD-02 (Corrección estructural en ejercicios):** En `src/components/Ejercicios.jsx` se sustituyó la comparación de cadenas rígida por una comparación de árboles DOM recursiva (`sonHtmlEquivalentes`). Ahora se evalúan etiquetas, atributos y valores de manera independiente del orden en que se redacten los atributos en la abreviatura.
-4. **AUD-01 (Límite de disponibilidad en Emmet):** Se incorporó en `src/components/Playground.jsx` y `src/components/Ejercicios.jsx` un filtro previo que restringe las expansiones con multiplicador superior a 50 repeticiones (`*50`) o entradas mayores de 500 caracteres, evitando congelaciones de la interfaz del navegador.
-5. **AUD-03 y AUD-04 (Accesibilidad visual y de movimiento):** En `src/styles.css` se elevaron los ratios de contraste para `.dialogo-progreso` y `.dialogo-nav button` (asegurando el cumplimiento del ratio mínimo 4.5:1), y se desactivó la transición y escala decorativa de `.guia::before` bajo la directiva `@media (prefers-reduced-motion: reduce)`.
+4. **AUD-01 (Límite de disponibilidad en Emmet):** Se incorporó un máximo de 50 por multiplicador en playground y ejercicios, y de 500 caracteres solo en playground. Esta primera versión no acotaba la expansión total al combinar operadores ni demostraba ausencia de bloqueos.
+5. **AUD-03 y AUD-04 (Accesibilidad visual y de movimiento):** En `src/styles.css` se modificaron los colores de `.dialogo-progreso` y `.dialogo-nav button` con el objetivo de mejorar el contraste, sin medición de ratios registrada en esa intervención, y se desactivó la transición y escala decorativa de `.guia::before` bajo la directiva `@media (prefers-reduced-motion: reduce)`.
 6. **Limpieza documental:** Se regularizó la extensión de `conversaciones-ia/web-vscode-emmet-claude.md` y se eliminó el archivo residual vacío `conversaciones-ia/brin_storming.md`.
 
-**Decisión:** Se aceptaron e integraron todas las recomendaciones del informe de auditoría sin alterar la estructura general ni los contenidos aprobados por el equipo.
+**Decisión:** Se integraron las modificaciones enumeradas, manteniendo la estructura general y los contenidos aprobados por el equipo. No se da por cerrado todo el informe de auditoría.
 
-**Justificación:** Eliminar datos personales es una exigencia obligatoria de la Sección 7 del enunciado; permitir que la corrección de ejercicios acepte atributos en cualquier orden evita penalizaciones didácticas injustas a los estudiantes; y los límites de Emmet garantizan la resiliencia del sitio web.
+**Justificación:** Eliminar datos personales es una exigencia obligatoria de la Sección 7 del enunciado; permitir que la corrección de ejercicios acepte atributos en cualquier orden evita penalizaciones didácticas injustas a los estudiantes; y los límites de Emmet reducen el riesgo de expansiones excesivas, sin garantizar por sí solos la disponibilidad en cualquier entrada.
 
-**Verificación:** Comprobación de la integridad del PNG sanitizado con `file`, inspección de las reglas CSS de alto contraste y verificación del algoritmo de comparación de nodos DOM.
+**Verificación:** En esta intervención se registraron la identificación del formato PNG mediante `file` y la inspección del CSS y del algoritmo DOM. Esas comprobaciones no acreditan que la ruta quedase oculta, un ratio concreto de contraste ni el comportamiento completo en navegador. Las pruebas posteriores se documentan por separado, sin atribuirlas retrospectivamente a esta intervención.
 
 **Participación:** Sandra F. (implementación y documentación), sobre la auditoría previa de Alberto M., Pablo C. y Raquel G.
 
@@ -321,3 +321,45 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `conversaciones-ia/web-vscode-emmet-claude.md`
 - `conversaciones-ia/brin_storming.md`
 - `PROCESO.md`
+
+## Fase 4: Verificar — Cierre acotado de pendientes para la entrega
+
+**Fecha:** 2026-10-27
+
+**Objetivo:** Corregir la ocultación de la ruta en la captura, limitar la expansión total de Emmet y las entradas de ambos formularios, precisar verificaciones documentadas y actualizar enlaces y explicación de Tab.
+
+**Herramienta:** Codex para implementación, pruebas y exportación del historial original; herramienta de edición de imágenes para cubrir la línea identificativa; Node, npm y Chrome para comprobaciones locales. Skill del proyecto `skills/auto-proceso/SKILL.md` sin modificaciones.
+
+**Prompt:** “Vamos a cerrar el proyecto para entregarlo. Usa la skill del proyecto y corrige estos pendientes”. La solicitud completa y las restricciones están en la conversación original enlazada.
+
+**Resultado:** Imagen editada y abierta para comprobar que ya no muestra la ruta; validación compartida de 500 caracteres y 200 nodos totales antes de expandir multiplicadores, con controles complementarios de repetición, profundidad, lorem y salida. Se actualizó la fuente oficial y se explicó la configuración de Tab. Los cinco enlaces locales del registro de despliegue ahora son relativos y existentes. Se matizaron afirmaciones no verificadas de la entrada anterior conservando nombres y atribución al equipo.
+
+**Decisión:** Aplicar únicamente los cuatro pendientes solicitados, conservar las conversaciones anteriores y crear una nueva exportación directa de esta sesión. En el registro de despliegue se modificaron solo los destinos de enlaces expresamente solicitados. Declarar el parser ya instalado como dependencia directa sin actualizar su versión.
+
+**Justificación:** El límite por multiplicador no acotaba combinaciones; contar el árbol sin expandir permite rechazar el exceso previamente. La revisión visual es necesaria para comprobar una ocultación efectiva. Distinguir pruebas reales de objetivos evita presentar garantías no demostradas.
+
+**Verificación:** Git inicialmente limpio, pull fast-forward hasta `639bb01`. Ocho pruebas automatizadas superadas; build y lint con código 0. En Chrome local: rechazo de `ul>li*50>span*50` y 501 caracteres en playground y siete ejercicios; soluciones canónicas aceptadas, incorrectas/vacías no aceptadas; alternativas de ejercicios 2 y 4 aceptadas. Playground recupera expansión válida tras error. Guía Emmet muestra configuración Tab y guía Interfaz carga la imagen corregida. No se observaron error/warn en la consulta de consola. Cinco enlaces relativos resuelven y el texto restante del registro es idéntico. Alcance y comprobaciones no realizadas en [resultados](evidencias/cierre/resultados.md); no se certifica seguridad ni accesibilidad global.
+
+**Participación:** Alberto M. en esta sesión con Codex. Se conservan los nombres y la atribución histórica de Sandra F., Raquel G. y Pablo C. al trabajo del equipo.
+
+**Conversación de origen:** [07-cierre-codex-2026-10-27.md](conversaciones-ia/07-cierre-codex-2026-10-27.md), exportada del historial original disponible hasta el corte explícito anterior a commit/push; sin intervenciones reconstruidas.
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `src/assets/instalacion/Diagrama anotado de Visual Studio Code.png`
+- `src/utils/emmetSeguro.js`
+- `src/components/Playground.jsx`
+- `src/components/Ejercicios.jsx`
+- `src/data/contenido.js`
+- `package.json`
+- `package-lock.json`
+- `evidencias/fuentes.md`
+- `conversaciones-ia/despliegue-produccion.md`
+- `conversaciones-ia/07-cierre-codex-2026-10-27.md`
+- `evidencias/cierre/plan.md`
+- `evidencias/cierre/resultados.md`
+- `evidencias/cierre/emmet.test.mjs`
+- `evidencias/cierre/tests.txt`
+- `evidencias/cierre/build.txt`
+- `evidencias/cierre/lint.txt`
+- `evidencias/cierre/exportar-sesion.py`
