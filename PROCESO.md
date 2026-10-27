@@ -171,7 +171,7 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 **Justificación:** Facilitar la comprensión del vocabulario técnico y permitir consultar las definiciones durante el aprendizaje.
 **Verificación:** Se inspeccionaron src/components/Glosario.jsx y los diez términos definidos en src/data/contenido.js. Se comprobó que src/App.jsx importa y muestra el componente Glosario. Esta comprobación verifica la integración en el código; no incluye una revisión visual ni una validación de las definiciones con fuentes externas.
 **Participación:** Raquel G., única participante confirmada.
-**Conversación de origen:** N/A.
+**Conversación de origen:** [05-conversacion-codex-guias-capturas-2026-10-25.md](conversaciones-ia/05-conversacion-codex-guias-capturas-2026-10-25.md).
 **Archivos afectados:**
 - src/components/Glosario.jsx
 - src/data/contenido.js
@@ -189,7 +189,7 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 **Justificación:** Relacionar las explicaciones con elementos visibles del editor facilita seguir la guía. Reutilizar las capturas evita duplicar recursos y permite mantener ejemplos coherentes entre secciones.
 **Verificación:** Se revisaron el diff, las importaciones de imágenes y los archivos existentes. La compilación mediante npm.cmd run build terminó con código 0 e incluyó las ocho imágenes utilizadas. Se comprobaron en el código el orden del ejemplo de carpetas y la excepción de Preferencias. No se realizó una comprobación visual del tutorial en navegador en esta revisión.
 **Participación:** Raquel G., única participante confirmada.
-**Conversación de origen:** N/A.
+**Conversación de origen:** [05-conversacion-codex-guias-capturas-2026-10-25.md](conversaciones-ia/05-conversacion-codex-guias-capturas-2026-10-25.md).
 **Archivos afectados:**
 - src/data/contenido.js
 - src/components/TutorialDialog.jsx
