@@ -363,3 +363,29 @@ Se dejan fuera las configuraciones avanzadas de VS Code, la creación de extensi
 - `evidencias/cierre/build.txt`
 - `evidencias/cierre/lint.txt`
 - `evidencias/cierre/exportar-sesion.py`
+
+## Fase 4: Verificar — Conservación de la confirmación de entrega
+
+**Fecha:** 2026-10-27
+
+**Objetivo:** Guardar la continuación de la conversación de cierre y la confirmación sobre la presentación.
+
+**Herramienta:** Codex y exportación directa del historial JSONL original.
+
+**Prompt:** “Ok, guarda esta conversación en su lugar en .md”.
+
+**Resultado:** Siete intervenciones originales conservadas en una continuación Markdown, con alcance y corte explícitos.
+
+**Decisión:** Crear un archivo nuevo enlazado al registro anterior, sin modificar conversaciones anteriores.
+
+**Justificación:** Conservar las confirmaciones posteriores al primer corte sin reconstruir intervenciones.
+
+**Verificación:** Estado Git limpio antes de sincronizar; pull sin novedades. Exportación filtrada por la marca temporal del corte anterior; comprobada presencia de la solicitud actual, existencia del archivo y ausencia de patrones de rutas personales y credenciales. No se repitieron pruebas de la aplicación en este guardado documental.
+
+**Participación:** Alberto M. con Codex; se conserva la atribución histórica del equipo.
+
+**Conversación de origen:** [08-confirmacion-entrega-codex-2026-10-27.md](conversaciones-ia/08-confirmacion-entrega-codex-2026-10-27.md).
+
+**Archivos afectados:**
+- `PROCESO.md`
+- `conversaciones-ia/08-confirmacion-entrega-codex-2026-10-27.md`
